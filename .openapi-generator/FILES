@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 apis/AdmissionregistrationApi.ts
 apis/AdmissionregistrationV1Api.ts
 apis/AdmissionregistrationV1beta1Api.ts
