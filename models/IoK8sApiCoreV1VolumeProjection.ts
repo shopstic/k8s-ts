@@ -10,54 +10,56 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1ConfigMapProjection } from './IoK8sApiCoreV1ConfigMapProjection.ts';
-import { IoK8sApiCoreV1DownwardAPIProjection } from './IoK8sApiCoreV1DownwardAPIProjection.ts';
-import { IoK8sApiCoreV1SecretProjection } from './IoK8sApiCoreV1SecretProjection.ts';
-import { IoK8sApiCoreV1ServiceAccountTokenProjection } from './IoK8sApiCoreV1ServiceAccountTokenProjection.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1ConfigMapProjection } from "./IoK8sApiCoreV1ConfigMapProjection.ts";
+import { IoK8sApiCoreV1DownwardAPIProjection } from "./IoK8sApiCoreV1DownwardAPIProjection.ts";
+import { IoK8sApiCoreV1SecretProjection } from "./IoK8sApiCoreV1SecretProjection.ts";
+import { IoK8sApiCoreV1ServiceAccountTokenProjection } from "./IoK8sApiCoreV1ServiceAccountTokenProjection.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * Projection that may be projected along with other supported volume types
 */
 export class IoK8sApiCoreV1VolumeProjection {
-    'configMap'?: IoK8sApiCoreV1ConfigMapProjection;
-    'downwardAPI'?: IoK8sApiCoreV1DownwardAPIProjection;
-    'secret'?: IoK8sApiCoreV1SecretProjection;
-    'serviceAccountToken'?: IoK8sApiCoreV1ServiceAccountTokenProjection;
+  "configMap"?: IoK8sApiCoreV1ConfigMapProjection;
+  "downwardAPI"?: IoK8sApiCoreV1DownwardAPIProjection;
+  "secret"?: IoK8sApiCoreV1SecretProjection;
+  "serviceAccountToken"?: IoK8sApiCoreV1ServiceAccountTokenProjection;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "configMap",
-            "baseName": "configMap",
-            "type": "IoK8sApiCoreV1ConfigMapProjection",
-            "format": ""
-        },
-        {
-            "name": "downwardAPI",
-            "baseName": "downwardAPI",
-            "type": "IoK8sApiCoreV1DownwardAPIProjection",
-            "format": ""
-        },
-        {
-            "name": "secret",
-            "baseName": "secret",
-            "type": "IoK8sApiCoreV1SecretProjection",
-            "format": ""
-        },
-        {
-            "name": "serviceAccountToken",
-            "baseName": "serviceAccountToken",
-            "type": "IoK8sApiCoreV1ServiceAccountTokenProjection",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "configMap",
+      "baseName": "configMap",
+      "type": "IoK8sApiCoreV1ConfigMapProjection",
+      "format": "",
+    },
+    {
+      "name": "downwardAPI",
+      "baseName": "downwardAPI",
+      "type": "IoK8sApiCoreV1DownwardAPIProjection",
+      "format": "",
+    },
+    {
+      "name": "secret",
+      "baseName": "secret",
+      "type": "IoK8sApiCoreV1SecretProjection",
+      "format": "",
+    },
+    {
+      "name": "serviceAccountToken",
+      "baseName": "serviceAccountToken",
+      "type": "IoK8sApiCoreV1ServiceAccountTokenProjection",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1VolumeProjection.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1VolumeProjection.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

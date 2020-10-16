@@ -10,32 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * Overhead structure represents the resource overhead associated with running a pod.
 */
 export class IoK8sApiNodeV1beta1Overhead {
-    /**
+  /**
     * PodFixed represents the fixed resource overhead associated with running a pod.
     */
-    'podFixed'?: { [key: string]: string; };
+  "podFixed"?: { [key: string]: string };
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "podFixed",
-            "baseName": "podFixed",
-            "type": "{ [key: string]: string; }",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "podFixed",
+      "baseName": "podFixed",
+      "type": "{ [key: string]: string; }",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiNodeV1beta1Overhead.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiNodeV1beta1Overhead.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

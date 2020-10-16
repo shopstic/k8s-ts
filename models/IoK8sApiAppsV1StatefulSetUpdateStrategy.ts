@@ -10,40 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiAppsV1RollingUpdateStatefulSetStrategy } from './IoK8sApiAppsV1RollingUpdateStatefulSetStrategy.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiAppsV1RollingUpdateStatefulSetStrategy } from "./IoK8sApiAppsV1RollingUpdateStatefulSetStrategy.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to perform updates. It includes any additional parameters necessary to perform the update for the indicated strategy.
 */
 export class IoK8sApiAppsV1StatefulSetUpdateStrategy {
-    'rollingUpdate'?: IoK8sApiAppsV1RollingUpdateStatefulSetStrategy;
-    /**
+  "rollingUpdate"?: IoK8sApiAppsV1RollingUpdateStatefulSetStrategy;
+  /**
     * Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpdate.
     */
-    'type'?: string;
+  "type"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "rollingUpdate",
-            "baseName": "rollingUpdate",
-            "type": "IoK8sApiAppsV1RollingUpdateStatefulSetStrategy",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "rollingUpdate",
+      "baseName": "rollingUpdate",
+      "type": "IoK8sApiAppsV1RollingUpdateStatefulSetStrategy",
+      "format": "",
+    },
+    {
+      "name": "type",
+      "baseName": "type",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAppsV1StatefulSetUpdateStrategy.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAppsV1StatefulSetUpdateStrategy.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

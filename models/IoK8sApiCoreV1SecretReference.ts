@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 */
 export class IoK8sApiCoreV1SecretReference {
-    /**
+  /**
     * Name is unique within a namespace to reference a secret resource.
     */
-    'name'?: string;
-    /**
+  "name"?: string;
+  /**
     * Namespace defines the space within which the secret name must be unique.
     */
-    'namespace'?: string;
+  "namespace"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "namespace",
-            "baseName": "namespace",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "name",
+      "baseName": "name",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "namespace",
+      "baseName": "namespace",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1SecretReference.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1SecretReference.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

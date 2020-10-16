@@ -10,61 +10,63 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1Service } from './IoK8sApiCoreV1Service.ts';
-import { IoK8sApimachineryPkgApisMetaV1ListMeta } from './IoK8sApimachineryPkgApisMetaV1ListMeta.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1Service } from "./IoK8sApiCoreV1Service.ts";
+import { IoK8sApimachineryPkgApisMetaV1ListMeta } from "./IoK8sApimachineryPkgApisMetaV1ListMeta.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * ServiceList holds a list of services.
 */
 export class IoK8sApiCoreV1ServiceList {
-    /**
+  /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-    'apiVersion'?: string;
-    /**
+  "apiVersion"?: string;
+  /**
     * List of services
     */
-    'items': Array<IoK8sApiCoreV1Service>;
-    /**
+  "items": Array<IoK8sApiCoreV1Service>;
+  /**
     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-    'kind'?: string;
-    'metadata'?: IoK8sApimachineryPkgApisMetaV1ListMeta;
+  "kind"?: string;
+  "metadata"?: IoK8sApimachineryPkgApisMetaV1ListMeta;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "apiVersion",
-            "baseName": "apiVersion",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "items",
-            "baseName": "items",
-            "type": "Array<IoK8sApiCoreV1Service>",
-            "format": ""
-        },
-        {
-            "name": "kind",
-            "baseName": "kind",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "IoK8sApimachineryPkgApisMetaV1ListMeta",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "apiVersion",
+      "baseName": "apiVersion",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "items",
+      "baseName": "items",
+      "type": "Array<IoK8sApiCoreV1Service>",
+      "format": "",
+    },
+    {
+      "name": "kind",
+      "baseName": "kind",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "metadata",
+      "baseName": "metadata",
+      "type": "IoK8sApimachineryPkgApisMetaV1ListMeta",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1ServiceList.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1ServiceList.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

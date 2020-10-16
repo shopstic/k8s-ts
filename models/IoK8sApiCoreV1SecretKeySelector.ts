@@ -10,52 +10,54 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * SecretKeySelector selects a key of a Secret.
 */
 export class IoK8sApiCoreV1SecretKeySelector {
-    /**
+  /**
     * The key of the secret to select from.  Must be a valid secret key.
     */
-    'key': string;
-    /**
+  "key": string;
+  /**
     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
     */
-    'name'?: string;
-    /**
+  "name"?: string;
+  /**
     * Specify whether the Secret or its key must be defined
     */
-    'optional'?: boolean;
+  "optional"?: boolean;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "key",
-            "baseName": "key",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "optional",
-            "baseName": "optional",
-            "type": "boolean",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "key",
+      "baseName": "key",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "name",
+      "baseName": "name",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "optional",
+      "baseName": "optional",
+      "type": "boolean",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1SecretKeySelector.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1SecretKeySelector.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

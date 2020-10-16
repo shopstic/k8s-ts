@@ -10,32 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * EndpointConditions represents the current condition of an endpoint.
 */
 export class IoK8sApiDiscoveryV1beta1EndpointConditions {
-    /**
+  /**
     * ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready.
     */
-    'ready'?: boolean;
+  "ready"?: boolean;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "ready",
-            "baseName": "ready",
-            "type": "boolean",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "ready",
+      "baseName": "ready",
+      "type": "boolean",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiDiscoveryV1beta1EndpointConditions.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiDiscoveryV1beta1EndpointConditions.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

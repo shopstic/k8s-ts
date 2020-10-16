@@ -10,60 +10,62 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1ObjectReference } from './IoK8sApiCoreV1ObjectReference.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1ObjectReference } from "./IoK8sApiCoreV1ObjectReference.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * EndpointAddress is a tuple that describes single IP address.
 */
 export class IoK8sApiCoreV1EndpointAddress {
-    /**
+  /**
     * The Hostname of this endpoint
     */
-    'hostname'?: string;
-    /**
+  "hostname"?: string;
+  /**
     * The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
     */
-    'ip': string;
-    /**
+  "ip": string;
+  /**
     * Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
     */
-    'nodeName'?: string;
-    'targetRef'?: IoK8sApiCoreV1ObjectReference;
+  "nodeName"?: string;
+  "targetRef"?: IoK8sApiCoreV1ObjectReference;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "hostname",
-            "baseName": "hostname",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "ip",
-            "baseName": "ip",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "nodeName",
-            "baseName": "nodeName",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "targetRef",
-            "baseName": "targetRef",
-            "type": "IoK8sApiCoreV1ObjectReference",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "hostname",
+      "baseName": "hostname",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "ip",
+      "baseName": "ip",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "nodeName",
+      "baseName": "nodeName",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "targetRef",
+      "baseName": "targetRef",
+      "type": "IoK8sApiCoreV1ObjectReference",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1EndpointAddress.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1EndpointAddress.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

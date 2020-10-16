@@ -10,90 +10,92 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApimachineryPkgApisMetaV1ObjectMeta } from './IoK8sApimachineryPkgApisMetaV1ObjectMeta.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApimachineryPkgApisMetaV1ObjectMeta } from "./IoK8sApimachineryPkgApisMetaV1ObjectMeta.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PriorityClass defines mapping from a priority class name to the priority integer value. The value can be any valid integer.
 */
 export class IoK8sApiSchedulingV1PriorityClass {
-    /**
+  /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-    'apiVersion'?: string;
-    /**
+  "apiVersion"?: string;
+  /**
     * description is an arbitrary string that usually provides guidelines on when this priority class should be used.
     */
-    'description'?: string;
-    /**
+  "description"?: string;
+  /**
     * globalDefault specifies whether this PriorityClass should be considered as the default priority for pods that do not have any priority class. Only one PriorityClass can be marked as `globalDefault`. However, if more than one PriorityClasses exists with their `globalDefault` field set to true, the smallest value of such global default PriorityClasses will be used as the default priority.
     */
-    'globalDefault'?: boolean;
-    /**
+  "globalDefault"?: boolean;
+  /**
     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-    'kind'?: string;
-    'metadata'?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
-    /**
+  "kind"?: string;
+  "metadata"?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
+  /**
     * PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is beta-level, gated by the NonPreemptingPriority feature-gate.
     */
-    'preemptionPolicy'?: string;
-    /**
+  "preemptionPolicy"?: string;
+  /**
     * The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.
     */
-    'value': number;
+  "value": number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "apiVersion",
-            "baseName": "apiVersion",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "globalDefault",
-            "baseName": "globalDefault",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "kind",
-            "baseName": "kind",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "IoK8sApimachineryPkgApisMetaV1ObjectMeta",
-            "format": ""
-        },
-        {
-            "name": "preemptionPolicy",
-            "baseName": "preemptionPolicy",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "value",
-            "baseName": "value",
-            "type": "number",
-            "format": "int32"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "apiVersion",
+      "baseName": "apiVersion",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "description",
+      "baseName": "description",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "globalDefault",
+      "baseName": "globalDefault",
+      "type": "boolean",
+      "format": "",
+    },
+    {
+      "name": "kind",
+      "baseName": "kind",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "metadata",
+      "baseName": "metadata",
+      "type": "IoK8sApimachineryPkgApisMetaV1ObjectMeta",
+      "format": "",
+    },
+    {
+      "name": "preemptionPolicy",
+      "baseName": "preemptionPolicy",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "value",
+      "baseName": "value",
+      "type": "number",
+      "format": "int32",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiSchedulingV1PriorityClass.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiSchedulingV1PriorityClass.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

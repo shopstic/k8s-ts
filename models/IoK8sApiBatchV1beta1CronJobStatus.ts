@@ -10,43 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1ObjectReference } from './IoK8sApiCoreV1ObjectReference.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1ObjectReference } from "./IoK8sApiCoreV1ObjectReference.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * CronJobStatus represents the current state of a cron job.
 */
 export class IoK8sApiBatchV1beta1CronJobStatus {
-    /**
+  /**
     * A list of pointers to currently running jobs.
     */
-    'active'?: Array<IoK8sApiCoreV1ObjectReference>;
-    /**
+  "active"?: Array<IoK8sApiCoreV1ObjectReference>;
+  /**
     * Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
     */
-    'lastScheduleTime'?: Date;
+  "lastScheduleTime"?: Date;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "active",
-            "baseName": "active",
-            "type": "Array<IoK8sApiCoreV1ObjectReference>",
-            "format": ""
-        },
-        {
-            "name": "lastScheduleTime",
-            "baseName": "lastScheduleTime",
-            "type": "Date",
-            "format": "date-time"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "active",
+      "baseName": "active",
+      "type": "Array<IoK8sApiCoreV1ObjectReference>",
+      "format": "",
+    },
+    {
+      "name": "lastScheduleTime",
+      "baseName": "lastScheduleTime",
+      "type": "Date",
+      "format": "date-time",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiBatchV1beta1CronJobStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiBatchV1beta1CronJobStatus.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

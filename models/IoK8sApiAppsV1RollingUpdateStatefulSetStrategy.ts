@@ -10,32 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.
 */
 export class IoK8sApiAppsV1RollingUpdateStatefulSetStrategy {
-    /**
+  /**
     * Partition indicates the ordinal at which the StatefulSet should be partitioned. Default value is 0.
     */
-    'partition'?: number;
+  "partition"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "partition",
-            "baseName": "partition",
-            "type": "number",
-            "format": "int32"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "partition",
+      "baseName": "partition",
+      "type": "number",
+      "format": "int32",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAppsV1RollingUpdateStatefulSetStrategy.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAppsV1RollingUpdateStatefulSetStrategy.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

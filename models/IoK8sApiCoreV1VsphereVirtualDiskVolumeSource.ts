@@ -10,62 +10,64 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * Represents a vSphere volume resource.
 */
 export class IoK8sApiCoreV1VsphereVirtualDiskVolumeSource {
-    /**
+  /**
     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.
     */
-    'fsType'?: string;
-    /**
+  "fsType"?: string;
+  /**
     * Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
     */
-    'storagePolicyID'?: string;
-    /**
+  "storagePolicyID"?: string;
+  /**
     * Storage Policy Based Management (SPBM) profile name.
     */
-    'storagePolicyName'?: string;
-    /**
+  "storagePolicyName"?: string;
+  /**
     * Path that identifies vSphere volume vmdk
     */
-    'volumePath': string;
+  "volumePath": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "fsType",
-            "baseName": "fsType",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "storagePolicyID",
-            "baseName": "storagePolicyID",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "storagePolicyName",
-            "baseName": "storagePolicyName",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "volumePath",
-            "baseName": "volumePath",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "fsType",
+      "baseName": "fsType",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "storagePolicyID",
+      "baseName": "storagePolicyID",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "storagePolicyName",
+      "baseName": "storagePolicyName",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "volumePath",
+      "baseName": "volumePath",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1VsphereVirtualDiskVolumeSource.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1VsphereVirtualDiskVolumeSource.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

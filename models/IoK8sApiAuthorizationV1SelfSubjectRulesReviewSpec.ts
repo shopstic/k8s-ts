@@ -10,29 +10,31 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 export class IoK8sApiAuthorizationV1SelfSubjectRulesReviewSpec {
-    /**
+  /**
     * Namespace to evaluate rules for. Required.
     */
-    'namespace'?: string;
+  "namespace"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "namespace",
-            "baseName": "namespace",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "namespace",
+      "baseName": "namespace",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAuthorizationV1SelfSubjectRulesReviewSpec.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAuthorizationV1SelfSubjectRulesReviewSpec.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * A topology selector requirement is a selector that matches given label. This is an alpha feature and may change in the future.
 */
 export class IoK8sApiCoreV1TopologySelectorLabelRequirement {
-    /**
+  /**
     * The label key that the selector applies to.
     */
-    'key': string;
-    /**
+  "key": string;
+  /**
     * An array of string values. One value must match the label to be selected. Each entry in Values is ORed.
     */
-    'values': Array<string>;
+  "values": Array<string>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "key",
-            "baseName": "key",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "values",
-            "baseName": "values",
-            "type": "Array<string>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "key",
+      "baseName": "key",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "values",
+      "baseName": "values",
+      "type": "Array<string>",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1TopologySelectorLabelRequirement.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1TopologySelectorLabelRequirement.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

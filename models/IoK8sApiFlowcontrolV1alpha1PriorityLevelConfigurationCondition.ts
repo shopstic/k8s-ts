@@ -10,72 +10,75 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PriorityLevelConfigurationCondition defines the condition of priority level.
 */
 export class IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationCondition {
-    /**
+  /**
     * Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
     */
-    'lastTransitionTime'?: Date;
-    /**
+  "lastTransitionTime"?: Date;
+  /**
     * `message` is a human-readable message indicating details about last transition.
     */
-    'message'?: string;
-    /**
+  "message"?: string;
+  /**
     * `reason` is a unique, one-word, CamelCase reason for the condition's last transition.
     */
-    'reason'?: string;
-    /**
+  "reason"?: string;
+  /**
     * `status` is the status of the condition. Can be True, False, Unknown. Required.
     */
-    'status'?: string;
-    /**
+  "status"?: string;
+  /**
     * `type` is the type of the condition. Required.
     */
-    'type'?: string;
+  "type"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "lastTransitionTime",
-            "baseName": "lastTransitionTime",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "reason",
-            "baseName": "reason",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "status",
-            "baseName": "status",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "lastTransitionTime",
+      "baseName": "lastTransitionTime",
+      "type": "Date",
+      "format": "date-time",
+    },
+    {
+      "name": "message",
+      "baseName": "message",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "reason",
+      "baseName": "reason",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "status",
+      "baseName": "status",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "type",
+      "baseName": "type",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationCondition.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationCondition
+      .attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * EventSource contains information for an event.
 */
 export class IoK8sApiCoreV1EventSource {
-    /**
+  /**
     * Component from which the event is generated.
     */
-    'component'?: string;
-    /**
+  "component"?: string;
+  /**
     * Node name on which the event is generated.
     */
-    'host'?: string;
+  "host"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "component",
-            "baseName": "component",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "host",
-            "baseName": "host",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "component",
+      "baseName": "component",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "host",
+      "baseName": "host",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1EventSource.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1EventSource.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

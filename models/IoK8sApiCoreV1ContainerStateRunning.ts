@@ -10,32 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * ContainerStateRunning is a running state of a container.
 */
 export class IoK8sApiCoreV1ContainerStateRunning {
-    /**
+  /**
     * Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
     */
-    'startedAt'?: Date;
+  "startedAt"?: Date;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "startedAt",
-            "baseName": "startedAt",
-            "type": "Date",
-            "format": "date-time"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "startedAt",
+      "baseName": "startedAt",
+      "type": "Date",
+      "format": "date-time",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1ContainerStateRunning.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1ContainerStateRunning.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

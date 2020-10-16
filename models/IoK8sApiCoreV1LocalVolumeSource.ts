@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * Local represents directly-attached storage with node affinity (Beta feature)
 */
 export class IoK8sApiCoreV1LocalVolumeSource {
-    /**
+  /**
     * Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". The default value is to auto-select a fileystem if unspecified.
     */
-    'fsType'?: string;
-    /**
+  "fsType"?: string;
+  /**
     * The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).
     */
-    'path': string;
+  "path": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "fsType",
-            "baseName": "fsType",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "path",
-            "baseName": "path",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "fsType",
+      "baseName": "fsType",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "path",
+      "baseName": "path",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1LocalVolumeSource.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1LocalVolumeSource.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

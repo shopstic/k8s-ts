@@ -10,30 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1ConfigMapNodeConfigSource } from './IoK8sApiCoreV1ConfigMapNodeConfigSource.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1ConfigMapNodeConfigSource } from "./IoK8sApiCoreV1ConfigMapNodeConfigSource.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.
 */
 export class IoK8sApiCoreV1NodeConfigSource {
-    'configMap'?: IoK8sApiCoreV1ConfigMapNodeConfigSource;
+  "configMap"?: IoK8sApiCoreV1ConfigMapNodeConfigSource;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "configMap",
-            "baseName": "configMap",
-            "type": "IoK8sApiCoreV1ConfigMapNodeConfigSource",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "configMap",
+      "baseName": "configMap",
+      "type": "IoK8sApiCoreV1ConfigMapNodeConfigSource",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1NodeConfigSource.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1NodeConfigSource.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

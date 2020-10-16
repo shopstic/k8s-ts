@@ -10,32 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * Spec to control the desired behavior of daemon set rolling update.
 */
 export class IoK8sApiAppsV1RollingUpdateDaemonSet {
-    /**
+  /**
     * IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.
     */
-    'maxUnavailable'?: string;
+  "maxUnavailable"?: (number | string);
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "maxUnavailable",
-            "baseName": "maxUnavailable",
-            "type": "string",
-            "format": "int-or-string"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "maxUnavailable",
+      "baseName": "maxUnavailable",
+      "type": "string",
+      "format": "int-or-string",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAppsV1RollingUpdateDaemonSet.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAppsV1RollingUpdateDaemonSet.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

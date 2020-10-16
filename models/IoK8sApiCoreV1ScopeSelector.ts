@@ -10,33 +10,35 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1ScopedResourceSelectorRequirement } from './IoK8sApiCoreV1ScopedResourceSelectorRequirement.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1ScopedResourceSelectorRequirement } from "./IoK8sApiCoreV1ScopedResourceSelectorRequirement.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * A scope selector represents the AND of the selectors represented by the scoped-resource selector requirements.
 */
 export class IoK8sApiCoreV1ScopeSelector {
-    /**
+  /**
     * A list of scope selector requirements by scope of the resources.
     */
-    'matchExpressions'?: Array<IoK8sApiCoreV1ScopedResourceSelectorRequirement>;
+  "matchExpressions"?: Array<IoK8sApiCoreV1ScopedResourceSelectorRequirement>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "matchExpressions",
-            "baseName": "matchExpressions",
-            "type": "Array<IoK8sApiCoreV1ScopedResourceSelectorRequirement>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "matchExpressions",
+      "baseName": "matchExpressions",
+      "type": "Array<IoK8sApiCoreV1ScopedResourceSelectorRequirement>",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1ScopeSelector.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1ScopeSelector.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

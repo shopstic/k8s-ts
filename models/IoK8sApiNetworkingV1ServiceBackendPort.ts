@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * ServiceBackendPort is the service port being referenced.
 */
 export class IoK8sApiNetworkingV1ServiceBackendPort {
-    /**
+  /**
     * Name is the name of the port on the Service. This is a mutually exclusive setting with \"Number\".
     */
-    'name'?: string;
-    /**
+  "name"?: string;
+  /**
     * Number is the numerical port number (e.g. 80) on the Service. This is a mutually exclusive setting with \"Name\".
     */
-    'number'?: number;
+  "number"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "number",
-            "baseName": "number",
-            "type": "number",
-            "format": "int32"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "name",
+      "baseName": "name",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "number",
+      "baseName": "number",
+      "type": "number",
+      "format": "int32",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiNetworkingV1ServiceBackendPort.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiNetworkingV1ServiceBackendPort.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

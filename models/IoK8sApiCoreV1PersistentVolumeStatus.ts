@@ -10,52 +10,54 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PersistentVolumeStatus is the current status of a persistent volume.
 */
 export class IoK8sApiCoreV1PersistentVolumeStatus {
-    /**
+  /**
     * A human-readable message indicating details about why the volume is in this state.
     */
-    'message'?: string;
-    /**
+  "message"?: string;
+  /**
     * Phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase
     */
-    'phase'?: string;
-    /**
+  "phase"?: string;
+  /**
     * Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
     */
-    'reason'?: string;
+  "reason"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "phase",
-            "baseName": "phase",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "reason",
-            "baseName": "reason",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "message",
+      "baseName": "message",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "phase",
+      "baseName": "phase",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "reason",
+      "baseName": "reason",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1PersistentVolumeStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1PersistentVolumeStatus.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

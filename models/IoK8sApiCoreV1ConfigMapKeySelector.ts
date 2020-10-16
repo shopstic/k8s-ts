@@ -10,52 +10,54 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * Selects a key from a ConfigMap.
 */
 export class IoK8sApiCoreV1ConfigMapKeySelector {
-    /**
+  /**
     * The key to select.
     */
-    'key': string;
-    /**
+  "key": string;
+  /**
     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
     */
-    'name'?: string;
-    /**
+  "name"?: string;
+  /**
     * Specify whether the ConfigMap or its key must be defined
     */
-    'optional'?: boolean;
+  "optional"?: boolean;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "key",
-            "baseName": "key",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "optional",
-            "baseName": "optional",
-            "type": "boolean",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "key",
+      "baseName": "key",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "name",
+      "baseName": "name",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "optional",
+      "baseName": "optional",
+      "type": "boolean",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1ConfigMapKeySelector.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1ConfigMapKeySelector.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

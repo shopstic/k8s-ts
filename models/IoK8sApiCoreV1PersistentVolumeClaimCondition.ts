@@ -10,76 +10,78 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PersistentVolumeClaimCondition contails details about state of pvc
 */
 export class IoK8sApiCoreV1PersistentVolumeClaimCondition {
-    /**
+  /**
     * Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
     */
-    'lastProbeTime'?: Date;
-    /**
+  "lastProbeTime"?: Date;
+  /**
     * Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
     */
-    'lastTransitionTime'?: Date;
-    /**
+  "lastTransitionTime"?: Date;
+  /**
     * Human-readable message indicating details about last transition.
     */
-    'message'?: string;
-    /**
+  "message"?: string;
+  /**
     * Unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports \"ResizeStarted\" that means the underlying persistent volume is being resized.
     */
-    'reason'?: string;
-    'status': string;
-    'type': string;
+  "reason"?: string;
+  "status": string;
+  "type": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "lastProbeTime",
-            "baseName": "lastProbeTime",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "lastTransitionTime",
-            "baseName": "lastTransitionTime",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "reason",
-            "baseName": "reason",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "status",
-            "baseName": "status",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "lastProbeTime",
+      "baseName": "lastProbeTime",
+      "type": "Date",
+      "format": "date-time",
+    },
+    {
+      "name": "lastTransitionTime",
+      "baseName": "lastTransitionTime",
+      "type": "Date",
+      "format": "date-time",
+    },
+    {
+      "name": "message",
+      "baseName": "message",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "reason",
+      "baseName": "reason",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "status",
+      "baseName": "status",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "type",
+      "baseName": "type",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1PersistentVolumeClaimCondition.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1PersistentVolumeClaimCondition.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

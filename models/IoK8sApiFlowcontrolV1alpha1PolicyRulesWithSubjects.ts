@@ -10,55 +10,57 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiFlowcontrolV1alpha1NonResourcePolicyRule } from './IoK8sApiFlowcontrolV1alpha1NonResourcePolicyRule.ts';
-import { IoK8sApiFlowcontrolV1alpha1ResourcePolicyRule } from './IoK8sApiFlowcontrolV1alpha1ResourcePolicyRule.ts';
-import { IoK8sApiFlowcontrolV1alpha1Subject } from './IoK8sApiFlowcontrolV1alpha1Subject.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiFlowcontrolV1alpha1NonResourcePolicyRule } from "./IoK8sApiFlowcontrolV1alpha1NonResourcePolicyRule.ts";
+import { IoK8sApiFlowcontrolV1alpha1ResourcePolicyRule } from "./IoK8sApiFlowcontrolV1alpha1ResourcePolicyRule.ts";
+import { IoK8sApiFlowcontrolV1alpha1Subject } from "./IoK8sApiFlowcontrolV1alpha1Subject.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PolicyRulesWithSubjects prescribes a test that applies to a request to an apiserver. The test considers the subject making the request, the verb being requested, and the resource to be acted upon. This PolicyRulesWithSubjects matches a request if and only if both (a) at least one member of subjects matches the request and (b) at least one member of resourceRules or nonResourceRules matches the request.
 */
 export class IoK8sApiFlowcontrolV1alpha1PolicyRulesWithSubjects {
-    /**
+  /**
     * `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the target non-resource URL.
     */
-    'nonResourceRules'?: Array<IoK8sApiFlowcontrolV1alpha1NonResourcePolicyRule>;
-    /**
+  "nonResourceRules"?: Array<IoK8sApiFlowcontrolV1alpha1NonResourcePolicyRule>;
+  /**
     * `resourceRules` is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty.
     */
-    'resourceRules'?: Array<IoK8sApiFlowcontrolV1alpha1ResourcePolicyRule>;
-    /**
+  "resourceRules"?: Array<IoK8sApiFlowcontrolV1alpha1ResourcePolicyRule>;
+  /**
     * subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required.
     */
-    'subjects': Array<IoK8sApiFlowcontrolV1alpha1Subject>;
+  "subjects": Array<IoK8sApiFlowcontrolV1alpha1Subject>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "nonResourceRules",
-            "baseName": "nonResourceRules",
-            "type": "Array<IoK8sApiFlowcontrolV1alpha1NonResourcePolicyRule>",
-            "format": ""
-        },
-        {
-            "name": "resourceRules",
-            "baseName": "resourceRules",
-            "type": "Array<IoK8sApiFlowcontrolV1alpha1ResourcePolicyRule>",
-            "format": ""
-        },
-        {
-            "name": "subjects",
-            "baseName": "subjects",
-            "type": "Array<IoK8sApiFlowcontrolV1alpha1Subject>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "nonResourceRules",
+      "baseName": "nonResourceRules",
+      "type": "Array<IoK8sApiFlowcontrolV1alpha1NonResourcePolicyRule>",
+      "format": "",
+    },
+    {
+      "name": "resourceRules",
+      "baseName": "resourceRules",
+      "type": "Array<IoK8sApiFlowcontrolV1alpha1ResourcePolicyRule>",
+      "format": "",
+    },
+    {
+      "name": "subjects",
+      "baseName": "subjects",
+      "type": "Array<IoK8sApiFlowcontrolV1alpha1Subject>",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiFlowcontrolV1alpha1PolicyRulesWithSubjects.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiFlowcontrolV1alpha1PolicyRulesWithSubjects.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

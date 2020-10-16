@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * Preconditions must be fulfilled before an operation (update, delete, etc.) is carried out.
 */
 export class IoK8sApimachineryPkgApisMetaV1Preconditions {
-    /**
+  /**
     * Specifies the target ResourceVersion
     */
-    'resourceVersion'?: string;
-    /**
+  "resourceVersion"?: string;
+  /**
     * Specifies the target UID.
     */
-    'uid'?: string;
+  "uid"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "resourceVersion",
-            "baseName": "resourceVersion",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "uid",
-            "baseName": "uid",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "resourceVersion",
+      "baseName": "resourceVersion",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "uid",
+      "baseName": "uid",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApimachineryPkgApisMetaV1Preconditions.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApimachineryPkgApisMetaV1Preconditions.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

@@ -10,32 +10,35 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PriorityLevelConfigurationReference contains information that points to the \"request-priority\" being used.
 */
 export class IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationReference {
-    /**
+  /**
     * `name` is the name of the priority level configuration being referenced Required.
     */
-    'name': string;
+  "name": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "name",
+      "baseName": "name",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationReference.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationReference
+      .attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

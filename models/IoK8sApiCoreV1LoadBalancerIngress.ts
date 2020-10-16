@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * LoadBalancerIngress represents the status of a load-balancer ingress point: traffic intended for the service should be sent to an ingress point.
 */
 export class IoK8sApiCoreV1LoadBalancerIngress {
-    /**
+  /**
     * Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
     */
-    'hostname'?: string;
-    /**
+  "hostname"?: string;
+  /**
     * IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
     */
-    'ip'?: string;
+  "ip"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "hostname",
-            "baseName": "hostname",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "ip",
-            "baseName": "ip",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "hostname",
+      "baseName": "hostname",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "ip",
+      "baseName": "ip",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1LoadBalancerIngress.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1LoadBalancerIngress.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

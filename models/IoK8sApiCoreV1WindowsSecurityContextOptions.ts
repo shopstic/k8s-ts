@@ -10,52 +10,54 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * WindowsSecurityContextOptions contain Windows-specific options and credentials.
 */
 export class IoK8sApiCoreV1WindowsSecurityContextOptions {
-    /**
+  /**
     * GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.
     */
-    'gmsaCredentialSpec'?: string;
-    /**
+  "gmsaCredentialSpec"?: string;
+  /**
     * GMSACredentialSpecName is the name of the GMSA credential spec to use.
     */
-    'gmsaCredentialSpecName'?: string;
-    /**
+  "gmsaCredentialSpecName"?: string;
+  /**
     * The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
     */
-    'runAsUserName'?: string;
+  "runAsUserName"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "gmsaCredentialSpec",
-            "baseName": "gmsaCredentialSpec",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "gmsaCredentialSpecName",
-            "baseName": "gmsaCredentialSpecName",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "runAsUserName",
-            "baseName": "runAsUserName",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "gmsaCredentialSpec",
+      "baseName": "gmsaCredentialSpec",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "gmsaCredentialSpecName",
+      "baseName": "gmsaCredentialSpecName",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "runAsUserName",
+      "baseName": "runAsUserName",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1WindowsSecurityContextOptions.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1WindowsSecurityContextOptions.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

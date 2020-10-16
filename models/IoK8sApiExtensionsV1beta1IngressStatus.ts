@@ -10,30 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1LoadBalancerStatus } from './IoK8sApiCoreV1LoadBalancerStatus.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1LoadBalancerStatus } from "./IoK8sApiCoreV1LoadBalancerStatus.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * IngressStatus describe the current state of the Ingress.
 */
 export class IoK8sApiExtensionsV1beta1IngressStatus {
-    'loadBalancer'?: IoK8sApiCoreV1LoadBalancerStatus;
+  "loadBalancer"?: IoK8sApiCoreV1LoadBalancerStatus;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "loadBalancer",
-            "baseName": "loadBalancer",
-            "type": "IoK8sApiCoreV1LoadBalancerStatus",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "loadBalancer",
+      "baseName": "loadBalancer",
+      "type": "IoK8sApiCoreV1LoadBalancerStatus",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiExtensionsV1beta1IngressStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiExtensionsV1beta1IngressStatus.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

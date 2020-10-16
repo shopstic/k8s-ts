@@ -10,52 +10,55 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * CrossVersionObjectReference contains enough information to let you identify the referred resource.
 */
 export class IoK8sApiAutoscalingV2beta2CrossVersionObjectReference {
-    /**
+  /**
     * API version of the referent
     */
-    'apiVersion'?: string;
-    /**
+  "apiVersion"?: string;
+  /**
     * Kind of the referent; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds\"
     */
-    'kind': string;
-    /**
+  "kind": string;
+  /**
     * Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names
     */
-    'name': string;
+  "name": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "apiVersion",
-            "baseName": "apiVersion",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "kind",
-            "baseName": "kind",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "apiVersion",
+      "baseName": "apiVersion",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "kind",
+      "baseName": "kind",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "name",
+      "baseName": "name",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAutoscalingV2beta2CrossVersionObjectReference.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAutoscalingV2beta2CrossVersionObjectReference
+      .attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

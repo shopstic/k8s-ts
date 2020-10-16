@@ -10,50 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiStorageV1beta1VolumeAttachmentSource } from './IoK8sApiStorageV1beta1VolumeAttachmentSource.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiStorageV1beta1VolumeAttachmentSource } from "./IoK8sApiStorageV1beta1VolumeAttachmentSource.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * VolumeAttachmentSpec is the specification of a VolumeAttachment request.
 */
 export class IoK8sApiStorageV1beta1VolumeAttachmentSpec {
-    /**
+  /**
     * Attacher indicates the name of the volume driver that MUST handle this request. This is the name returned by GetPluginName().
     */
-    'attacher': string;
-    /**
+  "attacher": string;
+  /**
     * The node that the volume should be attached to.
     */
-    'nodeName': string;
-    'source': IoK8sApiStorageV1beta1VolumeAttachmentSource;
+  "nodeName": string;
+  "source": IoK8sApiStorageV1beta1VolumeAttachmentSource;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attacher",
-            "baseName": "attacher",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "nodeName",
-            "baseName": "nodeName",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "source",
-            "baseName": "source",
-            "type": "IoK8sApiStorageV1beta1VolumeAttachmentSource",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "attacher",
+      "baseName": "attacher",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "nodeName",
+      "baseName": "nodeName",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "source",
+      "baseName": "source",
+      "type": "IoK8sApiStorageV1beta1VolumeAttachmentSource",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiStorageV1beta1VolumeAttachmentSpec.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiStorageV1beta1VolumeAttachmentSpec.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

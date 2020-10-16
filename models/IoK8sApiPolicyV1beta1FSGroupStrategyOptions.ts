@@ -10,43 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiPolicyV1beta1IDRange } from './IoK8sApiPolicyV1beta1IDRange.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiPolicyV1beta1IDRange } from "./IoK8sApiPolicyV1beta1IDRange.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * FSGroupStrategyOptions defines the strategy type and options used to create the strategy.
 */
 export class IoK8sApiPolicyV1beta1FSGroupStrategyOptions {
-    /**
+  /**
     * ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.
     */
-    'ranges'?: Array<IoK8sApiPolicyV1beta1IDRange>;
-    /**
+  "ranges"?: Array<IoK8sApiPolicyV1beta1IDRange>;
+  /**
     * rule is the strategy that will dictate what FSGroup is used in the SecurityContext.
     */
-    'rule'?: string;
+  "rule"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "ranges",
-            "baseName": "ranges",
-            "type": "Array<IoK8sApiPolicyV1beta1IDRange>",
-            "format": ""
-        },
-        {
-            "name": "rule",
-            "baseName": "rule",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "ranges",
+      "baseName": "ranges",
+      "type": "Array<IoK8sApiPolicyV1beta1IDRange>",
+      "format": "",
+    },
+    {
+      "name": "rule",
+      "baseName": "rule",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiPolicyV1beta1FSGroupStrategyOptions.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiPolicyV1beta1FSGroupStrategyOptions.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

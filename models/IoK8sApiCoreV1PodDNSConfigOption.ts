@@ -10,39 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PodDNSConfigOption defines DNS resolver options of a pod.
 */
 export class IoK8sApiCoreV1PodDNSConfigOption {
-    /**
+  /**
     * Required.
     */
-    'name'?: string;
-    'value'?: string;
+  "name"?: string;
+  "value"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "value",
-            "baseName": "value",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "name",
+      "baseName": "name",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "value",
+      "baseName": "value",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1PodDNSConfigOption.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1PodDNSConfigOption.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

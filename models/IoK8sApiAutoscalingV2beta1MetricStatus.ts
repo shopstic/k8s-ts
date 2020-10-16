@@ -10,64 +10,66 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiAutoscalingV2beta1ExternalMetricStatus } from './IoK8sApiAutoscalingV2beta1ExternalMetricStatus.ts';
-import { IoK8sApiAutoscalingV2beta1ObjectMetricStatus } from './IoK8sApiAutoscalingV2beta1ObjectMetricStatus.ts';
-import { IoK8sApiAutoscalingV2beta1PodsMetricStatus } from './IoK8sApiAutoscalingV2beta1PodsMetricStatus.ts';
-import { IoK8sApiAutoscalingV2beta1ResourceMetricStatus } from './IoK8sApiAutoscalingV2beta1ResourceMetricStatus.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiAutoscalingV2beta1ExternalMetricStatus } from "./IoK8sApiAutoscalingV2beta1ExternalMetricStatus.ts";
+import { IoK8sApiAutoscalingV2beta1ObjectMetricStatus } from "./IoK8sApiAutoscalingV2beta1ObjectMetricStatus.ts";
+import { IoK8sApiAutoscalingV2beta1PodsMetricStatus } from "./IoK8sApiAutoscalingV2beta1PodsMetricStatus.ts";
+import { IoK8sApiAutoscalingV2beta1ResourceMetricStatus } from "./IoK8sApiAutoscalingV2beta1ResourceMetricStatus.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * MetricStatus describes the last-read state of a single metric.
 */
 export class IoK8sApiAutoscalingV2beta1MetricStatus {
-    'external'?: IoK8sApiAutoscalingV2beta1ExternalMetricStatus;
-    'object'?: IoK8sApiAutoscalingV2beta1ObjectMetricStatus;
-    'pods'?: IoK8sApiAutoscalingV2beta1PodsMetricStatus;
-    'resource'?: IoK8sApiAutoscalingV2beta1ResourceMetricStatus;
-    /**
+  "external"?: IoK8sApiAutoscalingV2beta1ExternalMetricStatus;
+  "object"?: IoK8sApiAutoscalingV2beta1ObjectMetricStatus;
+  "pods"?: IoK8sApiAutoscalingV2beta1PodsMetricStatus;
+  "resource"?: IoK8sApiAutoscalingV2beta1ResourceMetricStatus;
+  /**
     * type is the type of metric source.  It will be one of \"Object\", \"Pods\" or \"Resource\", each corresponds to a matching field in the object.
     */
-    'type': string;
+  "type": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "external",
-            "baseName": "external",
-            "type": "IoK8sApiAutoscalingV2beta1ExternalMetricStatus",
-            "format": ""
-        },
-        {
-            "name": "object",
-            "baseName": "object",
-            "type": "IoK8sApiAutoscalingV2beta1ObjectMetricStatus",
-            "format": ""
-        },
-        {
-            "name": "pods",
-            "baseName": "pods",
-            "type": "IoK8sApiAutoscalingV2beta1PodsMetricStatus",
-            "format": ""
-        },
-        {
-            "name": "resource",
-            "baseName": "resource",
-            "type": "IoK8sApiAutoscalingV2beta1ResourceMetricStatus",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "external",
+      "baseName": "external",
+      "type": "IoK8sApiAutoscalingV2beta1ExternalMetricStatus",
+      "format": "",
+    },
+    {
+      "name": "object",
+      "baseName": "object",
+      "type": "IoK8sApiAutoscalingV2beta1ObjectMetricStatus",
+      "format": "",
+    },
+    {
+      "name": "pods",
+      "baseName": "pods",
+      "type": "IoK8sApiAutoscalingV2beta1PodsMetricStatus",
+      "format": "",
+    },
+    {
+      "name": "resource",
+      "baseName": "resource",
+      "type": "IoK8sApiAutoscalingV2beta1ResourceMetricStatus",
+      "format": "",
+    },
+    {
+      "name": "type",
+      "baseName": "type",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAutoscalingV2beta1MetricStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAutoscalingV2beta1MetricStatus.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

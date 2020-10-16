@@ -10,30 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1DaemonEndpoint } from './IoK8sApiCoreV1DaemonEndpoint.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1DaemonEndpoint } from "./IoK8sApiCoreV1DaemonEndpoint.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * NodeDaemonEndpoints lists ports opened by daemons running on the Node.
 */
 export class IoK8sApiCoreV1NodeDaemonEndpoints {
-    'kubeletEndpoint'?: IoK8sApiCoreV1DaemonEndpoint;
+  "kubeletEndpoint"?: IoK8sApiCoreV1DaemonEndpoint;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "kubeletEndpoint",
-            "baseName": "kubeletEndpoint",
-            "type": "IoK8sApiCoreV1DaemonEndpoint",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "kubeletEndpoint",
+      "baseName": "kubeletEndpoint",
+      "type": "IoK8sApiCoreV1DaemonEndpoint",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1NodeDaemonEndpoints.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1NodeDaemonEndpoints.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

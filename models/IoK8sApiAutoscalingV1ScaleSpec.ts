@@ -10,32 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * ScaleSpec describes the attributes of a scale subresource.
 */
 export class IoK8sApiAutoscalingV1ScaleSpec {
-    /**
+  /**
     * desired number of instances for the scaled object.
     */
-    'replicas'?: number;
+  "replicas"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "replicas",
-            "baseName": "replicas",
-            "type": "number",
-            "format": "int32"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "replicas",
+      "baseName": "replicas",
+      "type": "number",
+      "format": "int32",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAutoscalingV1ScaleSpec.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAutoscalingV1ScaleSpec.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

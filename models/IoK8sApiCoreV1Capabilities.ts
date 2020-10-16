@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * Adds and removes POSIX capabilities from running containers.
 */
 export class IoK8sApiCoreV1Capabilities {
-    /**
+  /**
     * Added capabilities
     */
-    'add'?: Array<string>;
-    /**
+  "add"?: Array<string>;
+  /**
     * Removed capabilities
     */
-    'drop'?: Array<string>;
+  "drop"?: Array<string>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "add",
-            "baseName": "add",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "drop",
-            "baseName": "drop",
-            "type": "Array<string>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "add",
+      "baseName": "add",
+      "type": "Array<string>",
+      "format": "",
+    },
+    {
+      "name": "drop",
+      "baseName": "drop",
+      "type": "Array<string>",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1Capabilities.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1Capabilities.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

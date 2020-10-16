@@ -10,50 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1TypedLocalObjectReference } from './IoK8sApiCoreV1TypedLocalObjectReference.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1TypedLocalObjectReference } from "./IoK8sApiCoreV1TypedLocalObjectReference.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * IngressBackend describes all endpoints for a given service and port.
 */
 export class IoK8sApiExtensionsV1beta1IngressBackend {
-    'resource'?: IoK8sApiCoreV1TypedLocalObjectReference;
-    /**
+  "resource"?: IoK8sApiCoreV1TypedLocalObjectReference;
+  /**
     * Specifies the name of the referenced service.
     */
-    'serviceName'?: string;
-    /**
+  "serviceName"?: string;
+  /**
     * IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.
     */
-    'servicePort'?: string;
+  "servicePort"?: (number | string);
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "resource",
-            "baseName": "resource",
-            "type": "IoK8sApiCoreV1TypedLocalObjectReference",
-            "format": ""
-        },
-        {
-            "name": "serviceName",
-            "baseName": "serviceName",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "servicePort",
-            "baseName": "servicePort",
-            "type": "string",
-            "format": "int-or-string"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "resource",
+      "baseName": "resource",
+      "type": "IoK8sApiCoreV1TypedLocalObjectReference",
+      "format": "",
+    },
+    {
+      "name": "serviceName",
+      "baseName": "serviceName",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "servicePort",
+      "baseName": "servicePort",
+      "type": "string",
+      "format": "int-or-string",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiExtensionsV1beta1IngressBackend.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiExtensionsV1beta1IngressBackend.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

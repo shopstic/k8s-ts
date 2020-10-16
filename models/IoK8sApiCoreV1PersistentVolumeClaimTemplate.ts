@@ -10,38 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1PersistentVolumeClaimSpec } from './IoK8sApiCoreV1PersistentVolumeClaimSpec.ts';
-import { IoK8sApimachineryPkgApisMetaV1ObjectMeta } from './IoK8sApimachineryPkgApisMetaV1ObjectMeta.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1PersistentVolumeClaimSpec } from "./IoK8sApiCoreV1PersistentVolumeClaimSpec.ts";
+import { IoK8sApimachineryPkgApisMetaV1ObjectMeta } from "./IoK8sApimachineryPkgApisMetaV1ObjectMeta.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PersistentVolumeClaimTemplate is used to produce PersistentVolumeClaim objects as part of an EphemeralVolumeSource.
 */
 export class IoK8sApiCoreV1PersistentVolumeClaimTemplate {
-    'metadata'?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
-    'spec': IoK8sApiCoreV1PersistentVolumeClaimSpec;
+  "metadata"?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
+  "spec": IoK8sApiCoreV1PersistentVolumeClaimSpec;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "IoK8sApimachineryPkgApisMetaV1ObjectMeta",
-            "format": ""
-        },
-        {
-            "name": "spec",
-            "baseName": "spec",
-            "type": "IoK8sApiCoreV1PersistentVolumeClaimSpec",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "metadata",
+      "baseName": "metadata",
+      "type": "IoK8sApimachineryPkgApisMetaV1ObjectMeta",
+      "format": "",
+    },
+    {
+      "name": "spec",
+      "baseName": "spec",
+      "type": "IoK8sApiCoreV1PersistentVolumeClaimSpec",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1PersistentVolumeClaimTemplate.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1PersistentVolumeClaimTemplate.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

@@ -10,40 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiAutoscalingV2beta2MetricValueStatus } from './IoK8sApiAutoscalingV2beta2MetricValueStatus.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiAutoscalingV2beta2MetricValueStatus } from "./IoK8sApiAutoscalingV2beta2MetricValueStatus.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * ResourceMetricStatus indicates the current value of a resource metric known to Kubernetes, as specified in requests and limits, describing each pod in the current scale target (e.g. CPU or memory).  Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the \"pods\" source.
 */
 export class IoK8sApiAutoscalingV2beta2ResourceMetricStatus {
-    'current': IoK8sApiAutoscalingV2beta2MetricValueStatus;
-    /**
+  "current": IoK8sApiAutoscalingV2beta2MetricValueStatus;
+  /**
     * Name is the name of the resource in question.
     */
-    'name': string;
+  "name": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "current",
-            "baseName": "current",
-            "type": "IoK8sApiAutoscalingV2beta2MetricValueStatus",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "current",
+      "baseName": "current",
+      "type": "IoK8sApiAutoscalingV2beta2MetricValueStatus",
+      "format": "",
+    },
+    {
+      "name": "name",
+      "baseName": "name",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAutoscalingV2beta2ResourceMetricStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAutoscalingV2beta2ResourceMetricStatus.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

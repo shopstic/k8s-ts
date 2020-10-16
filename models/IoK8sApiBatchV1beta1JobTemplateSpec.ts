@@ -10,38 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiBatchV1JobSpec } from './IoK8sApiBatchV1JobSpec.ts';
-import { IoK8sApimachineryPkgApisMetaV1ObjectMeta } from './IoK8sApimachineryPkgApisMetaV1ObjectMeta.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiBatchV1JobSpec } from "./IoK8sApiBatchV1JobSpec.ts";
+import { IoK8sApimachineryPkgApisMetaV1ObjectMeta } from "./IoK8sApimachineryPkgApisMetaV1ObjectMeta.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * JobTemplateSpec describes the data a Job should have when created from a template
 */
 export class IoK8sApiBatchV1beta1JobTemplateSpec {
-    'metadata'?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
-    'spec'?: IoK8sApiBatchV1JobSpec;
+  "metadata"?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
+  "spec"?: IoK8sApiBatchV1JobSpec;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "IoK8sApimachineryPkgApisMetaV1ObjectMeta",
-            "format": ""
-        },
-        {
-            "name": "spec",
-            "baseName": "spec",
-            "type": "IoK8sApiBatchV1JobSpec",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "metadata",
+      "baseName": "metadata",
+      "type": "IoK8sApimachineryPkgApisMetaV1ObjectMeta",
+      "format": "",
+    },
+    {
+      "name": "spec",
+      "baseName": "spec",
+      "type": "IoK8sApiBatchV1JobSpec",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiBatchV1beta1JobTemplateSpec.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiBatchV1beta1JobTemplateSpec.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

@@ -10,63 +10,65 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1PersistentVolumeClaimCondition } from './IoK8sApiCoreV1PersistentVolumeClaimCondition.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1PersistentVolumeClaimCondition } from "./IoK8sApiCoreV1PersistentVolumeClaimCondition.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PersistentVolumeClaimStatus is the current status of a persistent volume claim.
 */
 export class IoK8sApiCoreV1PersistentVolumeClaimStatus {
-    /**
+  /**
     * AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
     */
-    'accessModes'?: Array<string>;
-    /**
+  "accessModes"?: Array<string>;
+  /**
     * Represents the actual resources of the underlying volume.
     */
-    'capacity'?: { [key: string]: string; };
-    /**
+  "capacity"?: { [key: string]: string };
+  /**
     * Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
     */
-    'conditions'?: Array<IoK8sApiCoreV1PersistentVolumeClaimCondition>;
-    /**
+  "conditions"?: Array<IoK8sApiCoreV1PersistentVolumeClaimCondition>;
+  /**
     * Phase represents the current phase of PersistentVolumeClaim.
     */
-    'phase'?: string;
+  "phase"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "accessModes",
-            "baseName": "accessModes",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "capacity",
-            "baseName": "capacity",
-            "type": "{ [key: string]: string; }",
-            "format": ""
-        },
-        {
-            "name": "conditions",
-            "baseName": "conditions",
-            "type": "Array<IoK8sApiCoreV1PersistentVolumeClaimCondition>",
-            "format": ""
-        },
-        {
-            "name": "phase",
-            "baseName": "phase",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "accessModes",
+      "baseName": "accessModes",
+      "type": "Array<string>",
+      "format": "",
+    },
+    {
+      "name": "capacity",
+      "baseName": "capacity",
+      "type": "{ [key: string]: string; }",
+      "format": "",
+    },
+    {
+      "name": "conditions",
+      "baseName": "conditions",
+      "type": "Array<IoK8sApiCoreV1PersistentVolumeClaimCondition>",
+      "format": "",
+    },
+    {
+      "name": "phase",
+      "baseName": "phase",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1PersistentVolumeClaimStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1PersistentVolumeClaimStatus.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

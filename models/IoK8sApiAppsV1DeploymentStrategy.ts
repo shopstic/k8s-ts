@@ -10,40 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiAppsV1RollingUpdateDeployment } from './IoK8sApiAppsV1RollingUpdateDeployment.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiAppsV1RollingUpdateDeployment } from "./IoK8sApiAppsV1RollingUpdateDeployment.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * DeploymentStrategy describes how to replace existing pods with new ones.
 */
 export class IoK8sApiAppsV1DeploymentStrategy {
-    'rollingUpdate'?: IoK8sApiAppsV1RollingUpdateDeployment;
-    /**
+  "rollingUpdate"?: IoK8sApiAppsV1RollingUpdateDeployment;
+  /**
     * Type of deployment. Can be \"Recreate\" or \"RollingUpdate\". Default is RollingUpdate.
     */
-    'type'?: string;
+  "type"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "rollingUpdate",
-            "baseName": "rollingUpdate",
-            "type": "IoK8sApiAppsV1RollingUpdateDeployment",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "rollingUpdate",
+      "baseName": "rollingUpdate",
+      "type": "IoK8sApiAppsV1RollingUpdateDeployment",
+      "format": "",
+    },
+    {
+      "name": "type",
+      "baseName": "type",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAppsV1DeploymentStrategy.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAppsV1DeploymentStrategy.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

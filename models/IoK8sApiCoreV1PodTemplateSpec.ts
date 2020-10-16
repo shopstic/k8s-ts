@@ -10,38 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1PodSpec } from './IoK8sApiCoreV1PodSpec.ts';
-import { IoK8sApimachineryPkgApisMetaV1ObjectMeta } from './IoK8sApimachineryPkgApisMetaV1ObjectMeta.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1PodSpec } from "./IoK8sApiCoreV1PodSpec.ts";
+import { IoK8sApimachineryPkgApisMetaV1ObjectMeta } from "./IoK8sApimachineryPkgApisMetaV1ObjectMeta.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PodTemplateSpec describes the data a pod should have when created from a template
 */
 export class IoK8sApiCoreV1PodTemplateSpec {
-    'metadata'?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
-    'spec'?: IoK8sApiCoreV1PodSpec;
+  "metadata"?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
+  "spec"?: IoK8sApiCoreV1PodSpec;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "IoK8sApimachineryPkgApisMetaV1ObjectMeta",
-            "format": ""
-        },
-        {
-            "name": "spec",
-            "baseName": "spec",
-            "type": "IoK8sApiCoreV1PodSpec",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "metadata",
+      "baseName": "metadata",
+      "type": "IoK8sApimachineryPkgApisMetaV1ObjectMeta",
+      "format": "",
+    },
+    {
+      "name": "spec",
+      "baseName": "spec",
+      "type": "IoK8sApiCoreV1PodSpec",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1PodTemplateSpec.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1PodTemplateSpec.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

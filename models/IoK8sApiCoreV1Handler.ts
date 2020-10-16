@@ -10,46 +10,48 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1ExecAction } from './IoK8sApiCoreV1ExecAction.ts';
-import { IoK8sApiCoreV1HTTPGetAction } from './IoK8sApiCoreV1HTTPGetAction.ts';
-import { IoK8sApiCoreV1TCPSocketAction } from './IoK8sApiCoreV1TCPSocketAction.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1ExecAction } from "./IoK8sApiCoreV1ExecAction.ts";
+import { IoK8sApiCoreV1HTTPGetAction } from "./IoK8sApiCoreV1HTTPGetAction.ts";
+import { IoK8sApiCoreV1TCPSocketAction } from "./IoK8sApiCoreV1TCPSocketAction.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * Handler defines a specific action that should be taken
 */
 export class IoK8sApiCoreV1Handler {
-    'exec'?: IoK8sApiCoreV1ExecAction;
-    'httpGet'?: IoK8sApiCoreV1HTTPGetAction;
-    'tcpSocket'?: IoK8sApiCoreV1TCPSocketAction;
+  "exec"?: IoK8sApiCoreV1ExecAction;
+  "httpGet"?: IoK8sApiCoreV1HTTPGetAction;
+  "tcpSocket"?: IoK8sApiCoreV1TCPSocketAction;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "exec",
-            "baseName": "exec",
-            "type": "IoK8sApiCoreV1ExecAction",
-            "format": ""
-        },
-        {
-            "name": "httpGet",
-            "baseName": "httpGet",
-            "type": "IoK8sApiCoreV1HTTPGetAction",
-            "format": ""
-        },
-        {
-            "name": "tcpSocket",
-            "baseName": "tcpSocket",
-            "type": "IoK8sApiCoreV1TCPSocketAction",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "exec",
+      "baseName": "exec",
+      "type": "IoK8sApiCoreV1ExecAction",
+      "format": "",
+    },
+    {
+      "name": "httpGet",
+      "baseName": "httpGet",
+      "type": "IoK8sApiCoreV1HTTPGetAction",
+      "format": "",
+    },
+    {
+      "name": "tcpSocket",
+      "baseName": "tcpSocket",
+      "type": "IoK8sApiCoreV1TCPSocketAction",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1Handler.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1Handler.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

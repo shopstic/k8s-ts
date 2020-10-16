@@ -10,33 +10,35 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1LimitRangeItem } from './IoK8sApiCoreV1LimitRangeItem.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1LimitRangeItem } from "./IoK8sApiCoreV1LimitRangeItem.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * LimitRangeSpec defines a min/max usage limit for resources that match on kind.
 */
 export class IoK8sApiCoreV1LimitRangeSpec {
-    /**
+  /**
     * Limits is the list of LimitRangeItem objects that are enforced.
     */
-    'limits': Array<IoK8sApiCoreV1LimitRangeItem>;
+  "limits": Array<IoK8sApiCoreV1LimitRangeItem>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "limits",
-            "baseName": "limits",
-            "type": "Array<IoK8sApiCoreV1LimitRangeItem>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "limits",
+      "baseName": "limits",
+      "type": "Array<IoK8sApiCoreV1LimitRangeItem>",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1LimitRangeSpec.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1LimitRangeSpec.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

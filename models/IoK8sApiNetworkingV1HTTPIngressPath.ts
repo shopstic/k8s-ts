@@ -10,50 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiNetworkingV1IngressBackend } from './IoK8sApiNetworkingV1IngressBackend.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiNetworkingV1IngressBackend } from "./IoK8sApiNetworkingV1IngressBackend.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * HTTPIngressPath associates a path with a backend. Incoming urls matching the path are forwarded to the backend.
 */
 export class IoK8sApiNetworkingV1HTTPIngressPath {
-    'backend': IoK8sApiNetworkingV1IngressBackend;
-    /**
+  "backend": IoK8sApiNetworkingV1IngressBackend;
+  /**
     * Path is matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional \"path\" part of a URL as defined by RFC 3986. Paths must begin with a '/'. When unspecified, all paths from incoming requests are matched.
     */
-    'path'?: string;
-    /**
+  "path"?: string;
+  /**
     * PathType determines the interpretation of the Path matching. PathType can be one of the following values: * Exact: Matches the URL path exactly. * Prefix: Matches based on a URL path prefix split by '/'. Matching is   done on a path element by element basis. A path element refers is the   list of labels in the path split by the '/' separator. A request is a   match for path p if every p is an element-wise prefix of p of the   request path. Note that if the last element of the path is a substring   of the last element in request path, it is not a match (e.g. /foo/bar   matches /foo/bar/baz, but does not match /foo/barbaz). * ImplementationSpecific: Interpretation of the Path matching is up to   the IngressClass. Implementations can treat this as a separate PathType   or treat it identically to Prefix or Exact path types. Implementations are required to support all path types.
     */
-    'pathType'?: string;
+  "pathType"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "backend",
-            "baseName": "backend",
-            "type": "IoK8sApiNetworkingV1IngressBackend",
-            "format": ""
-        },
-        {
-            "name": "path",
-            "baseName": "path",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "pathType",
-            "baseName": "pathType",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "backend",
+      "baseName": "backend",
+      "type": "IoK8sApiNetworkingV1IngressBackend",
+      "format": "",
+    },
+    {
+      "name": "path",
+      "baseName": "path",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "pathType",
+      "baseName": "pathType",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiNetworkingV1HTTPIngressPath.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiNetworkingV1HTTPIngressPath.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

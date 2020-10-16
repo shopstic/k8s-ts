@@ -10,73 +10,75 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1HTTPHeader } from './IoK8sApiCoreV1HTTPHeader.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1HTTPHeader } from "./IoK8sApiCoreV1HTTPHeader.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * HTTPGetAction describes an action based on HTTP Get requests.
 */
 export class IoK8sApiCoreV1HTTPGetAction {
-    /**
+  /**
     * Host name to connect to, defaults to the pod IP. You probably want to set \"Host\" in httpHeaders instead.
     */
-    'host'?: string;
-    /**
+  "host"?: string;
+  /**
     * Custom headers to set in the request. HTTP allows repeated headers.
     */
-    'httpHeaders'?: Array<IoK8sApiCoreV1HTTPHeader>;
-    /**
+  "httpHeaders"?: Array<IoK8sApiCoreV1HTTPHeader>;
+  /**
     * Path to access on the HTTP server.
     */
-    'path'?: string;
-    /**
+  "path"?: string;
+  /**
     * IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.
     */
-    'port': string;
-    /**
+  "port": (number | string);
+  /**
     * Scheme to use for connecting to the host. Defaults to HTTP.
     */
-    'scheme'?: string;
+  "scheme"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "host",
-            "baseName": "host",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "httpHeaders",
-            "baseName": "httpHeaders",
-            "type": "Array<IoK8sApiCoreV1HTTPHeader>",
-            "format": ""
-        },
-        {
-            "name": "path",
-            "baseName": "path",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "port",
-            "baseName": "port",
-            "type": "string",
-            "format": "int-or-string"
-        },
-        {
-            "name": "scheme",
-            "baseName": "scheme",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "host",
+      "baseName": "host",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "httpHeaders",
+      "baseName": "httpHeaders",
+      "type": "Array<IoK8sApiCoreV1HTTPHeader>",
+      "format": "",
+    },
+    {
+      "name": "path",
+      "baseName": "path",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "port",
+      "baseName": "port",
+      "type": "string",
+      "format": "int-or-string",
+    },
+    {
+      "name": "scheme",
+      "baseName": "scheme",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1HTTPGetAction.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1HTTPGetAction.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

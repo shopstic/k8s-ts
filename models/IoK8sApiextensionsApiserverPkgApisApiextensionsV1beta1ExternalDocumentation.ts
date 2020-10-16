@@ -10,36 +10,39 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * ExternalDocumentation allows referencing an external resource for extended documentation.
 */
 export class IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1ExternalDocumentation {
-    'description'?: string;
-    'url'?: string;
+  "description"?: string;
+  "url"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "description",
-            "baseName": "description",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "url",
-            "baseName": "url",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "description",
+      "baseName": "description",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "url",
+      "baseName": "url",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1ExternalDocumentation.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1ExternalDocumentation
+      .attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

@@ -10,60 +10,62 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1SecretReference } from './IoK8sApiCoreV1SecretReference.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1SecretReference } from "./IoK8sApiCoreV1SecretReference.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.
 */
 export class IoK8sApiCoreV1CinderPersistentVolumeSource {
-    /**
+  /**
     * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
     */
-    'fsType'?: string;
-    /**
+  "fsType"?: string;
+  /**
     * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
     */
-    'readOnly'?: boolean;
-    'secretRef'?: IoK8sApiCoreV1SecretReference;
-    /**
+  "readOnly"?: boolean;
+  "secretRef"?: IoK8sApiCoreV1SecretReference;
+  /**
     * volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md
     */
-    'volumeID': string;
+  "volumeID": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "fsType",
-            "baseName": "fsType",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "readOnly",
-            "baseName": "readOnly",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "secretRef",
-            "baseName": "secretRef",
-            "type": "IoK8sApiCoreV1SecretReference",
-            "format": ""
-        },
-        {
-            "name": "volumeID",
-            "baseName": "volumeID",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "fsType",
+      "baseName": "fsType",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "readOnly",
+      "baseName": "readOnly",
+      "type": "boolean",
+      "format": "",
+    },
+    {
+      "name": "secretRef",
+      "baseName": "secretRef",
+      "type": "IoK8sApiCoreV1SecretReference",
+      "format": "",
+    },
+    {
+      "name": "volumeID",
+      "baseName": "volumeID",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1CinderPersistentVolumeSource.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1CinderPersistentVolumeSource.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

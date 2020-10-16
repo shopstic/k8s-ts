@@ -10,37 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiAutoscalingV2beta2HPAScalingRules } from './IoK8sApiAutoscalingV2beta2HPAScalingRules.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiAutoscalingV2beta2HPAScalingRules } from "./IoK8sApiAutoscalingV2beta2HPAScalingRules.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * HorizontalPodAutoscalerBehavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively).
 */
 export class IoK8sApiAutoscalingV2beta2HorizontalPodAutoscalerBehavior {
-    'scaleDown'?: IoK8sApiAutoscalingV2beta2HPAScalingRules;
-    'scaleUp'?: IoK8sApiAutoscalingV2beta2HPAScalingRules;
+  "scaleDown"?: IoK8sApiAutoscalingV2beta2HPAScalingRules;
+  "scaleUp"?: IoK8sApiAutoscalingV2beta2HPAScalingRules;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "scaleDown",
-            "baseName": "scaleDown",
-            "type": "IoK8sApiAutoscalingV2beta2HPAScalingRules",
-            "format": ""
-        },
-        {
-            "name": "scaleUp",
-            "baseName": "scaleUp",
-            "type": "IoK8sApiAutoscalingV2beta2HPAScalingRules",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "scaleDown",
+      "baseName": "scaleDown",
+      "type": "IoK8sApiAutoscalingV2beta2HPAScalingRules",
+      "format": "",
+    },
+    {
+      "name": "scaleUp",
+      "baseName": "scaleUp",
+      "type": "IoK8sApiAutoscalingV2beta2HPAScalingRules",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAutoscalingV2beta2HorizontalPodAutoscalerBehavior.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAutoscalingV2beta2HorizontalPodAutoscalerBehavior
+      .attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

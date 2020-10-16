@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * TokenRequestStatus is the result of a token request.
 */
 export class IoK8sApiAuthenticationV1TokenRequestStatus {
-    /**
+  /**
     * Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
     */
-    'expirationTimestamp': Date;
-    /**
+  "expirationTimestamp": Date;
+  /**
     * Token is the opaque bearer token.
     */
-    'token': string;
+  "token": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "expirationTimestamp",
-            "baseName": "expirationTimestamp",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "token",
-            "baseName": "token",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "expirationTimestamp",
+      "baseName": "expirationTimestamp",
+      "type": "Date",
+      "format": "date-time",
+    },
+    {
+      "name": "token",
+      "baseName": "token",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAuthenticationV1TokenRequestStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAuthenticationV1TokenRequestStatus.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

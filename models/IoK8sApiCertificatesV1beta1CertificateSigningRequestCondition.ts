@@ -10,79 +10,82 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 export class IoK8sApiCertificatesV1beta1CertificateSigningRequestCondition {
-    /**
+  /**
     * Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
     */
-    'lastTransitionTime'?: Date;
-    /**
+  "lastTransitionTime"?: Date;
+  /**
     * Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
     */
-    'lastUpdateTime'?: Date;
-    /**
+  "lastUpdateTime"?: Date;
+  /**
     * human readable message with details about the request state
     */
-    'message'?: string;
-    /**
+  "message"?: string;
+  /**
     * brief reason for the request state
     */
-    'reason'?: string;
-    /**
+  "reason"?: string;
+  /**
     * Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be \"False\" or \"Unknown\". Defaults to \"True\". If unset, should be treated as \"True\".
     */
-    'status'?: string;
-    /**
+  "status"?: string;
+  /**
     * type of the condition. Known conditions include \"Approved\", \"Denied\", and \"Failed\".
     */
-    'type': string;
+  "type": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "lastTransitionTime",
-            "baseName": "lastTransitionTime",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "lastUpdateTime",
-            "baseName": "lastUpdateTime",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "reason",
-            "baseName": "reason",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "status",
-            "baseName": "status",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "lastTransitionTime",
+      "baseName": "lastTransitionTime",
+      "type": "Date",
+      "format": "date-time",
+    },
+    {
+      "name": "lastUpdateTime",
+      "baseName": "lastUpdateTime",
+      "type": "Date",
+      "format": "date-time",
+    },
+    {
+      "name": "message",
+      "baseName": "message",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "reason",
+      "baseName": "reason",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "status",
+      "baseName": "status",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "type",
+      "baseName": "type",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCertificatesV1beta1CertificateSigningRequestCondition.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCertificatesV1beta1CertificateSigningRequestCondition
+      .attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

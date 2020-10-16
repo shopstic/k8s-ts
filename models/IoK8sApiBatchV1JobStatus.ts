@@ -10,83 +10,85 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiBatchV1JobCondition } from './IoK8sApiBatchV1JobCondition.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiBatchV1JobCondition } from "./IoK8sApiBatchV1JobCondition.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * JobStatus represents the current state of a Job.
 */
 export class IoK8sApiBatchV1JobStatus {
-    /**
+  /**
     * The number of actively running pods.
     */
-    'active'?: number;
-    /**
+  "active"?: number;
+  /**
     * Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
     */
-    'completionTime'?: Date;
-    /**
+  "completionTime"?: Date;
+  /**
     * The latest available observations of an object's current state. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
     */
-    'conditions'?: Array<IoK8sApiBatchV1JobCondition>;
-    /**
+  "conditions"?: Array<IoK8sApiBatchV1JobCondition>;
+  /**
     * The number of pods which reached phase Failed.
     */
-    'failed'?: number;
-    /**
+  "failed"?: number;
+  /**
     * Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
     */
-    'startTime'?: Date;
-    /**
+  "startTime"?: Date;
+  /**
     * The number of pods which reached phase Succeeded.
     */
-    'succeeded'?: number;
+  "succeeded"?: number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "active",
-            "baseName": "active",
-            "type": "number",
-            "format": "int32"
-        },
-        {
-            "name": "completionTime",
-            "baseName": "completionTime",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "conditions",
-            "baseName": "conditions",
-            "type": "Array<IoK8sApiBatchV1JobCondition>",
-            "format": ""
-        },
-        {
-            "name": "failed",
-            "baseName": "failed",
-            "type": "number",
-            "format": "int32"
-        },
-        {
-            "name": "startTime",
-            "baseName": "startTime",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "succeeded",
-            "baseName": "succeeded",
-            "type": "number",
-            "format": "int32"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "active",
+      "baseName": "active",
+      "type": "number",
+      "format": "int32",
+    },
+    {
+      "name": "completionTime",
+      "baseName": "completionTime",
+      "type": "Date",
+      "format": "date-time",
+    },
+    {
+      "name": "conditions",
+      "baseName": "conditions",
+      "type": "Array<IoK8sApiBatchV1JobCondition>",
+      "format": "",
+    },
+    {
+      "name": "failed",
+      "baseName": "failed",
+      "type": "number",
+      "format": "int32",
+    },
+    {
+      "name": "startTime",
+      "baseName": "startTime",
+      "type": "Date",
+      "format": "date-time",
+    },
+    {
+      "name": "succeeded",
+      "baseName": "succeeded",
+      "type": "number",
+      "format": "int32",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiBatchV1JobStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiBatchV1JobStatus.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

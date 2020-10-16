@@ -10,40 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1TypedLocalObjectReference } from './IoK8sApiCoreV1TypedLocalObjectReference.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1TypedLocalObjectReference } from "./IoK8sApiCoreV1TypedLocalObjectReference.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * IngressClassSpec provides information about the class of an Ingress.
 */
 export class IoK8sApiNetworkingV1IngressClassSpec {
-    /**
+  /**
     * Controller refers to the name of the controller that should handle this class. This allows for different \"flavors\" that are controlled by the same controller. For example, you may have different Parameters for the same implementing controller. This should be specified as a domain-prefixed path no more than 250 characters in length, e.g. \"acme.io/ingress-controller\". This field is immutable.
     */
-    'controller'?: string;
-    'parameters'?: IoK8sApiCoreV1TypedLocalObjectReference;
+  "controller"?: string;
+  "parameters"?: IoK8sApiCoreV1TypedLocalObjectReference;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "controller",
-            "baseName": "controller",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "parameters",
-            "baseName": "parameters",
-            "type": "IoK8sApiCoreV1TypedLocalObjectReference",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "controller",
+      "baseName": "controller",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "parameters",
+      "baseName": "parameters",
+      "type": "IoK8sApiCoreV1TypedLocalObjectReference",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiNetworkingV1IngressClassSpec.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiNetworkingV1IngressClassSpec.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

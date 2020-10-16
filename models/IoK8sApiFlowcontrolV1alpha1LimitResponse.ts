@@ -10,40 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiFlowcontrolV1alpha1QueuingConfiguration } from './IoK8sApiFlowcontrolV1alpha1QueuingConfiguration.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiFlowcontrolV1alpha1QueuingConfiguration } from "./IoK8sApiFlowcontrolV1alpha1QueuingConfiguration.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * LimitResponse defines how to handle requests that can not be executed right now.
 */
 export class IoK8sApiFlowcontrolV1alpha1LimitResponse {
-    'queuing'?: IoK8sApiFlowcontrolV1alpha1QueuingConfiguration;
-    /**
+  "queuing"?: IoK8sApiFlowcontrolV1alpha1QueuingConfiguration;
+  /**
     * `type` is \"Queue\" or \"Reject\". \"Queue\" means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. \"Reject\" means that requests that can not be executed upon arrival are rejected. Required.
     */
-    'type': string;
+  "type": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "queuing",
-            "baseName": "queuing",
-            "type": "IoK8sApiFlowcontrolV1alpha1QueuingConfiguration",
-            "format": ""
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "queuing",
+      "baseName": "queuing",
+      "type": "IoK8sApiFlowcontrolV1alpha1QueuingConfiguration",
+      "format": "",
+    },
+    {
+      "name": "type",
+      "baseName": "type",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiFlowcontrolV1alpha1LimitResponse.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiFlowcontrolV1alpha1LimitResponse.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

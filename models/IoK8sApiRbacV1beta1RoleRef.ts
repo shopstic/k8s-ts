@@ -10,52 +10,54 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * RoleRef contains information that points to the role being used
 */
 export class IoK8sApiRbacV1beta1RoleRef {
-    /**
+  /**
     * APIGroup is the group for the resource being referenced
     */
-    'apiGroup': string;
-    /**
+  "apiGroup": string;
+  /**
     * Kind is the type of resource being referenced
     */
-    'kind': string;
-    /**
+  "kind": string;
+  /**
     * Name is the name of resource being referenced
     */
-    'name': string;
+  "name": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "apiGroup",
-            "baseName": "apiGroup",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "kind",
-            "baseName": "kind",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "apiGroup",
+      "baseName": "apiGroup",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "kind",
+      "baseName": "kind",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "name",
+      "baseName": "name",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiRbacV1beta1RoleRef.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiRbacV1beta1RoleRef.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

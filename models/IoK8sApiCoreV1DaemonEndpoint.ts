@@ -10,32 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * DaemonEndpoint contains information about a single Daemon endpoint.
 */
 export class IoK8sApiCoreV1DaemonEndpoint {
-    /**
+  /**
     * Port number of the given endpoint.
     */
-    'port': number;
+  "port": number;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "port",
-            "baseName": "Port",
-            "type": "number",
-            "format": "int32"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "port",
+      "baseName": "Port",
+      "type": "number",
+      "format": "int32",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1DaemonEndpoint.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1DaemonEndpoint.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

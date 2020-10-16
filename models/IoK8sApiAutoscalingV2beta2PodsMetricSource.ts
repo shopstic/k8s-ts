@@ -10,38 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiAutoscalingV2beta2MetricIdentifier } from './IoK8sApiAutoscalingV2beta2MetricIdentifier.ts';
-import { IoK8sApiAutoscalingV2beta2MetricTarget } from './IoK8sApiAutoscalingV2beta2MetricTarget.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiAutoscalingV2beta2MetricIdentifier } from "./IoK8sApiAutoscalingV2beta2MetricIdentifier.ts";
+import { IoK8sApiAutoscalingV2beta2MetricTarget } from "./IoK8sApiAutoscalingV2beta2MetricTarget.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PodsMetricSource indicates how to scale on a metric describing each pod in the current scale target (for example, transactions-processed-per-second). The values will be averaged together before being compared to the target value.
 */
 export class IoK8sApiAutoscalingV2beta2PodsMetricSource {
-    'metric': IoK8sApiAutoscalingV2beta2MetricIdentifier;
-    'target': IoK8sApiAutoscalingV2beta2MetricTarget;
+  "metric": IoK8sApiAutoscalingV2beta2MetricIdentifier;
+  "target": IoK8sApiAutoscalingV2beta2MetricTarget;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "metric",
-            "baseName": "metric",
-            "type": "IoK8sApiAutoscalingV2beta2MetricIdentifier",
-            "format": ""
-        },
-        {
-            "name": "target",
-            "baseName": "target",
-            "type": "IoK8sApiAutoscalingV2beta2MetricTarget",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "metric",
+      "baseName": "metric",
+      "type": "IoK8sApiAutoscalingV2beta2MetricIdentifier",
+      "format": "",
+    },
+    {
+      "name": "target",
+      "baseName": "target",
+      "type": "IoK8sApiAutoscalingV2beta2MetricTarget",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAutoscalingV2beta2PodsMetricSource.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAutoscalingV2beta2PodsMetricSource.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

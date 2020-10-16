@@ -10,38 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiAuthorizationV1NonResourceAttributes } from './IoK8sApiAuthorizationV1NonResourceAttributes.ts';
-import { IoK8sApiAuthorizationV1ResourceAttributes } from './IoK8sApiAuthorizationV1ResourceAttributes.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiAuthorizationV1NonResourceAttributes } from "./IoK8sApiAuthorizationV1NonResourceAttributes.ts";
+import { IoK8sApiAuthorizationV1ResourceAttributes } from "./IoK8sApiAuthorizationV1ResourceAttributes.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * SelfSubjectAccessReviewSpec is a description of the access request.  Exactly one of ResourceAuthorizationAttributes and NonResourceAuthorizationAttributes must be set
 */
 export class IoK8sApiAuthorizationV1SelfSubjectAccessReviewSpec {
-    'nonResourceAttributes'?: IoK8sApiAuthorizationV1NonResourceAttributes;
-    'resourceAttributes'?: IoK8sApiAuthorizationV1ResourceAttributes;
+  "nonResourceAttributes"?: IoK8sApiAuthorizationV1NonResourceAttributes;
+  "resourceAttributes"?: IoK8sApiAuthorizationV1ResourceAttributes;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "nonResourceAttributes",
-            "baseName": "nonResourceAttributes",
-            "type": "IoK8sApiAuthorizationV1NonResourceAttributes",
-            "format": ""
-        },
-        {
-            "name": "resourceAttributes",
-            "baseName": "resourceAttributes",
-            "type": "IoK8sApiAuthorizationV1ResourceAttributes",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "nonResourceAttributes",
+      "baseName": "nonResourceAttributes",
+      "type": "IoK8sApiAuthorizationV1NonResourceAttributes",
+      "format": "",
+    },
+    {
+      "name": "resourceAttributes",
+      "baseName": "resourceAttributes",
+      "type": "IoK8sApiAuthorizationV1ResourceAttributes",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAuthorizationV1SelfSubjectAccessReviewSpec.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAuthorizationV1SelfSubjectAccessReviewSpec.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

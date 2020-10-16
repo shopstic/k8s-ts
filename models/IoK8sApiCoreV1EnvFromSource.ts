@@ -10,48 +10,50 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1ConfigMapEnvSource } from './IoK8sApiCoreV1ConfigMapEnvSource.ts';
-import { IoK8sApiCoreV1SecretEnvSource } from './IoK8sApiCoreV1SecretEnvSource.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1ConfigMapEnvSource } from "./IoK8sApiCoreV1ConfigMapEnvSource.ts";
+import { IoK8sApiCoreV1SecretEnvSource } from "./IoK8sApiCoreV1SecretEnvSource.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * EnvFromSource represents the source of a set of ConfigMaps
 */
 export class IoK8sApiCoreV1EnvFromSource {
-    'configMapRef'?: IoK8sApiCoreV1ConfigMapEnvSource;
-    /**
+  "configMapRef"?: IoK8sApiCoreV1ConfigMapEnvSource;
+  /**
     * An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
     */
-    'prefix'?: string;
-    'secretRef'?: IoK8sApiCoreV1SecretEnvSource;
+  "prefix"?: string;
+  "secretRef"?: IoK8sApiCoreV1SecretEnvSource;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "configMapRef",
-            "baseName": "configMapRef",
-            "type": "IoK8sApiCoreV1ConfigMapEnvSource",
-            "format": ""
-        },
-        {
-            "name": "prefix",
-            "baseName": "prefix",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "secretRef",
-            "baseName": "secretRef",
-            "type": "IoK8sApiCoreV1SecretEnvSource",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "configMapRef",
+      "baseName": "configMapRef",
+      "type": "IoK8sApiCoreV1ConfigMapEnvSource",
+      "format": "",
+    },
+    {
+      "name": "prefix",
+      "baseName": "prefix",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "secretRef",
+      "baseName": "secretRef",
+      "type": "IoK8sApiCoreV1SecretEnvSource",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1EnvFromSource.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1EnvFromSource.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

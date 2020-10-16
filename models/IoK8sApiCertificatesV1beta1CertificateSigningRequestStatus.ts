@@ -10,40 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCertificatesV1beta1CertificateSigningRequestCondition } from './IoK8sApiCertificatesV1beta1CertificateSigningRequestCondition.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCertificatesV1beta1CertificateSigningRequestCondition } from "./IoK8sApiCertificatesV1beta1CertificateSigningRequestCondition.ts";
+import { HttpFile } from "../http/http.ts";
 
 export class IoK8sApiCertificatesV1beta1CertificateSigningRequestStatus {
-    /**
+  /**
     * If request was approved, the controller will place the issued certificate here.
     */
-    'certificate'?: string;
-    /**
+  "certificate"?: string;
+  /**
     * Conditions applied to the request, such as approval or denial.
     */
-    'conditions'?: Array<IoK8sApiCertificatesV1beta1CertificateSigningRequestCondition>;
+  "conditions"?: Array<
+    IoK8sApiCertificatesV1beta1CertificateSigningRequestCondition
+  >;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "certificate",
-            "baseName": "certificate",
-            "type": "string",
-            "format": "byte"
-        },
-        {
-            "name": "conditions",
-            "baseName": "conditions",
-            "type": "Array<IoK8sApiCertificatesV1beta1CertificateSigningRequestCondition>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "certificate",
+      "baseName": "certificate",
+      "type": "string",
+      "format": "byte",
+    },
+    {
+      "name": "conditions",
+      "baseName": "conditions",
+      "type":
+        "Array<IoK8sApiCertificatesV1beta1CertificateSigningRequestCondition>",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCertificatesV1beta1CertificateSigningRequestStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCertificatesV1beta1CertificateSigningRequestStatus
+      .attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

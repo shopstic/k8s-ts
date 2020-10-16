@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * VolumeError captures an error encountered during a volume operation.
 */
 export class IoK8sApiStorageV1alpha1VolumeError {
-    /**
+  /**
     * String detailing the error encountered during Attach or Detach operation. This string maybe logged, so it should not contain sensitive information.
     */
-    'message'?: string;
-    /**
+  "message"?: string;
+  /**
     * Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
     */
-    'time'?: Date;
+  "time"?: Date;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "time",
-            "baseName": "time",
-            "type": "Date",
-            "format": "date-time"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "message",
+      "baseName": "message",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "time",
+      "baseName": "time",
+      "type": "Date",
+      "format": "date-time",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiStorageV1alpha1VolumeError.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiStorageV1alpha1VolumeError.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

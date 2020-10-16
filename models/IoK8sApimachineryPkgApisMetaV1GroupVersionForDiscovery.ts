@@ -10,42 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * GroupVersion contains the \"group/version\" and \"version\" string of a version. It is made a struct to keep extensibility.
 */
 export class IoK8sApimachineryPkgApisMetaV1GroupVersionForDiscovery {
-    /**
+  /**
     * groupVersion specifies the API group and version in the form \"group/version\"
     */
-    'groupVersion': string;
-    /**
+  "groupVersion": string;
+  /**
     * version specifies the version in the form of \"version\". This is to save the clients the trouble of splitting the GroupVersion.
     */
-    'version': string;
+  "version": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "groupVersion",
-            "baseName": "groupVersion",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "version",
-            "baseName": "version",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "groupVersion",
+      "baseName": "groupVersion",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "version",
+      "baseName": "version",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApimachineryPkgApisMetaV1GroupVersionForDiscovery.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApimachineryPkgApisMetaV1GroupVersionForDiscovery
+      .attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

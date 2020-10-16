@@ -10,38 +10,40 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiCoreV1TypedLocalObjectReference } from './IoK8sApiCoreV1TypedLocalObjectReference.ts';
-import { IoK8sApiNetworkingV1IngressServiceBackend } from './IoK8sApiNetworkingV1IngressServiceBackend.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiCoreV1TypedLocalObjectReference } from "./IoK8sApiCoreV1TypedLocalObjectReference.ts";
+import { IoK8sApiNetworkingV1IngressServiceBackend } from "./IoK8sApiNetworkingV1IngressServiceBackend.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * IngressBackend describes all endpoints for a given service and port.
 */
 export class IoK8sApiNetworkingV1IngressBackend {
-    'resource'?: IoK8sApiCoreV1TypedLocalObjectReference;
-    'service'?: IoK8sApiNetworkingV1IngressServiceBackend;
+  "resource"?: IoK8sApiCoreV1TypedLocalObjectReference;
+  "service"?: IoK8sApiNetworkingV1IngressServiceBackend;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "resource",
-            "baseName": "resource",
-            "type": "IoK8sApiCoreV1TypedLocalObjectReference",
-            "format": ""
-        },
-        {
-            "name": "service",
-            "baseName": "service",
-            "type": "IoK8sApiNetworkingV1IngressServiceBackend",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "resource",
+      "baseName": "resource",
+      "type": "IoK8sApiCoreV1TypedLocalObjectReference",
+      "format": "",
+    },
+    {
+      "name": "service",
+      "baseName": "service",
+      "type": "IoK8sApiNetworkingV1IngressServiceBackend",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiNetworkingV1IngressBackend.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiNetworkingV1IngressBackend.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

@@ -10,69 +10,71 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiRbacV1beta1RoleRef } from './IoK8sApiRbacV1beta1RoleRef.ts';
-import { IoK8sApiRbacV1beta1Subject } from './IoK8sApiRbacV1beta1Subject.ts';
-import { IoK8sApimachineryPkgApisMetaV1ObjectMeta } from './IoK8sApimachineryPkgApisMetaV1ObjectMeta.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiRbacV1beta1RoleRef } from "./IoK8sApiRbacV1beta1RoleRef.ts";
+import { IoK8sApiRbacV1beta1Subject } from "./IoK8sApiRbacV1beta1Subject.ts";
+import { IoK8sApimachineryPkgApisMetaV1ObjectMeta } from "./IoK8sApimachineryPkgApisMetaV1ObjectMeta.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace, and adds who information via Subject. Deprecated in v1.17 in favor of rbac.authorization.k8s.io/v1 ClusterRoleBinding, and will no longer be served in v1.22.
 */
 export class IoK8sApiRbacV1beta1ClusterRoleBinding {
-    /**
+  /**
     * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
     */
-    'apiVersion'?: string;
-    /**
+  "apiVersion"?: string;
+  /**
     * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
     */
-    'kind'?: string;
-    'metadata'?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
-    'roleRef': IoK8sApiRbacV1beta1RoleRef;
-    /**
+  "kind"?: string;
+  "metadata"?: IoK8sApimachineryPkgApisMetaV1ObjectMeta;
+  "roleRef": IoK8sApiRbacV1beta1RoleRef;
+  /**
     * Subjects holds references to the objects the role applies to.
     */
-    'subjects'?: Array<IoK8sApiRbacV1beta1Subject>;
+  "subjects"?: Array<IoK8sApiRbacV1beta1Subject>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "apiVersion",
-            "baseName": "apiVersion",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "kind",
-            "baseName": "kind",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "IoK8sApimachineryPkgApisMetaV1ObjectMeta",
-            "format": ""
-        },
-        {
-            "name": "roleRef",
-            "baseName": "roleRef",
-            "type": "IoK8sApiRbacV1beta1RoleRef",
-            "format": ""
-        },
-        {
-            "name": "subjects",
-            "baseName": "subjects",
-            "type": "Array<IoK8sApiRbacV1beta1Subject>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "apiVersion",
+      "baseName": "apiVersion",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "kind",
+      "baseName": "kind",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "metadata",
+      "baseName": "metadata",
+      "type": "IoK8sApimachineryPkgApisMetaV1ObjectMeta",
+      "format": "",
+    },
+    {
+      "name": "roleRef",
+      "baseName": "roleRef",
+      "type": "IoK8sApiRbacV1beta1RoleRef",
+      "format": "",
+    },
+    {
+      "name": "subjects",
+      "baseName": "subjects",
+      "type": "Array<IoK8sApiRbacV1beta1Subject>",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiRbacV1beta1ClusterRoleBinding.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiRbacV1beta1ClusterRoleBinding.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

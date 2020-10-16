@@ -10,32 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * AllowedFlexVolume represents a single Flexvolume that is allowed to be used.
 */
 export class IoK8sApiPolicyV1beta1AllowedFlexVolume {
-    /**
+  /**
     * driver is the name of the Flexvolume driver.
     */
-    'driver': string;
+  "driver": string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "driver",
-            "baseName": "driver",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "driver",
+      "baseName": "driver",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiPolicyV1beta1AllowedFlexVolume.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiPolicyV1beta1AllowedFlexVolume.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

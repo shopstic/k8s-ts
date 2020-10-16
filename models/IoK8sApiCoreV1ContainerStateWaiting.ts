@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * ContainerStateWaiting is a waiting state of a container.
 */
 export class IoK8sApiCoreV1ContainerStateWaiting {
-    /**
+  /**
     * Message regarding why the container is not yet running.
     */
-    'message'?: string;
-    /**
+  "message"?: string;
+  /**
     * (brief) reason the container is not yet running.
     */
-    'reason'?: string;
+  "reason"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "reason",
-            "baseName": "reason",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "message",
+      "baseName": "message",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "reason",
+      "baseName": "reason",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1ContainerStateWaiting.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1ContainerStateWaiting.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

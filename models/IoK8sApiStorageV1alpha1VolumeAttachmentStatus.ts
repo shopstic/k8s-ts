@@ -10,57 +10,59 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiStorageV1alpha1VolumeError } from './IoK8sApiStorageV1alpha1VolumeError.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiStorageV1alpha1VolumeError } from "./IoK8sApiStorageV1alpha1VolumeError.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * VolumeAttachmentStatus is the status of a VolumeAttachment request.
 */
 export class IoK8sApiStorageV1alpha1VolumeAttachmentStatus {
-    'attachError'?: IoK8sApiStorageV1alpha1VolumeError;
-    /**
+  "attachError"?: IoK8sApiStorageV1alpha1VolumeError;
+  /**
     * Indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
     */
-    'attached': boolean;
-    /**
+  "attached": boolean;
+  /**
     * Upon successful attach, this field is populated with any information returned by the attach operation that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
     */
-    'attachmentMetadata'?: { [key: string]: string; };
-    'detachError'?: IoK8sApiStorageV1alpha1VolumeError;
+  "attachmentMetadata"?: { [key: string]: string };
+  "detachError"?: IoK8sApiStorageV1alpha1VolumeError;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "attachError",
-            "baseName": "attachError",
-            "type": "IoK8sApiStorageV1alpha1VolumeError",
-            "format": ""
-        },
-        {
-            "name": "attached",
-            "baseName": "attached",
-            "type": "boolean",
-            "format": ""
-        },
-        {
-            "name": "attachmentMetadata",
-            "baseName": "attachmentMetadata",
-            "type": "{ [key: string]: string; }",
-            "format": ""
-        },
-        {
-            "name": "detachError",
-            "baseName": "detachError",
-            "type": "IoK8sApiStorageV1alpha1VolumeError",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "attachError",
+      "baseName": "attachError",
+      "type": "IoK8sApiStorageV1alpha1VolumeError",
+      "format": "",
+    },
+    {
+      "name": "attached",
+      "baseName": "attached",
+      "type": "boolean",
+      "format": "",
+    },
+    {
+      "name": "attachmentMetadata",
+      "baseName": "attachmentMetadata",
+      "type": "{ [key: string]: string; }",
+      "format": "",
+    },
+    {
+      "name": "detachError",
+      "baseName": "detachError",
+      "type": "IoK8sApiStorageV1alpha1VolumeError",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiStorageV1alpha1VolumeAttachmentStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiStorageV1alpha1VolumeAttachmentStatus.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

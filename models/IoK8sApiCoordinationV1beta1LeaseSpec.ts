@@ -10,72 +10,74 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * LeaseSpec is a specification of a Lease.
 */
 export class IoK8sApiCoordinationV1beta1LeaseSpec {
-    /**
+  /**
     * MicroTime is version of Time with microsecond level precision.
     */
-    'acquireTime'?: Date;
-    /**
+  "acquireTime"?: Date;
+  /**
     * holderIdentity contains the identity of the holder of a current lease.
     */
-    'holderIdentity'?: string;
-    /**
+  "holderIdentity"?: string;
+  /**
     * leaseDurationSeconds is a duration that candidates for a lease need to wait to force acquire it. This is measure against time of last observed RenewTime.
     */
-    'leaseDurationSeconds'?: number;
-    /**
+  "leaseDurationSeconds"?: number;
+  /**
     * leaseTransitions is the number of transitions of a lease between holders.
     */
-    'leaseTransitions'?: number;
-    /**
+  "leaseTransitions"?: number;
+  /**
     * MicroTime is version of Time with microsecond level precision.
     */
-    'renewTime'?: Date;
+  "renewTime"?: Date;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "acquireTime",
-            "baseName": "acquireTime",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "holderIdentity",
-            "baseName": "holderIdentity",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "leaseDurationSeconds",
-            "baseName": "leaseDurationSeconds",
-            "type": "number",
-            "format": "int32"
-        },
-        {
-            "name": "leaseTransitions",
-            "baseName": "leaseTransitions",
-            "type": "number",
-            "format": "int32"
-        },
-        {
-            "name": "renewTime",
-            "baseName": "renewTime",
-            "type": "Date",
-            "format": "date-time"
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "acquireTime",
+      "baseName": "acquireTime",
+      "type": "Date",
+      "format": "date-time",
+    },
+    {
+      "name": "holderIdentity",
+      "baseName": "holderIdentity",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "leaseDurationSeconds",
+      "baseName": "leaseDurationSeconds",
+      "type": "number",
+      "format": "int32",
+    },
+    {
+      "name": "leaseTransitions",
+      "baseName": "leaseTransitions",
+      "type": "number",
+      "format": "int32",
+    },
+    {
+      "name": "renewTime",
+      "baseName": "renewTime",
+      "type": "Date",
+      "format": "date-time",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoordinationV1beta1LeaseSpec.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoordinationV1beta1LeaseSpec.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

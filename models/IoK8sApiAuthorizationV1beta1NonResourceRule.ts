@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * NonResourceRule holds information that describes a rule for the non-resource
 */
 export class IoK8sApiAuthorizationV1beta1NonResourceRule {
-    /**
+  /**
     * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  \"*\" means all.
     */
-    'nonResourceURLs'?: Array<string>;
-    /**
+  "nonResourceURLs"?: Array<string>;
+  /**
     * Verb is a list of kubernetes non-resource API verbs, like: get, post, put, delete, patch, head, options.  \"*\" means all.
     */
-    'verbs': Array<string>;
+  "verbs": Array<string>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "nonResourceURLs",
-            "baseName": "nonResourceURLs",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "verbs",
-            "baseName": "verbs",
-            "type": "Array<string>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "nonResourceURLs",
+      "baseName": "nonResourceURLs",
+      "type": "Array<string>",
+      "format": "",
+    },
+    {
+      "name": "verbs",
+      "baseName": "verbs",
+      "type": "Array<string>",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiAuthorizationV1beta1NonResourceRule.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiAuthorizationV1beta1NonResourceRule.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

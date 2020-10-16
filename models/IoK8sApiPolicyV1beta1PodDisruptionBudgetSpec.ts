@@ -10,50 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApimachineryPkgApisMetaV1LabelSelector } from './IoK8sApimachineryPkgApisMetaV1LabelSelector.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApimachineryPkgApisMetaV1LabelSelector } from "./IoK8sApimachineryPkgApisMetaV1LabelSelector.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PodDisruptionBudgetSpec is a description of a PodDisruptionBudget.
 */
 export class IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec {
-    /**
+  /**
     * IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.
     */
-    'maxUnavailable'?: string;
-    /**
+  "maxUnavailable"?: (number | string);
+  /**
     * IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.
     */
-    'minAvailable'?: string;
-    'selector'?: IoK8sApimachineryPkgApisMetaV1LabelSelector;
+  "minAvailable"?: (number | string);
+  "selector"?: IoK8sApimachineryPkgApisMetaV1LabelSelector;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "maxUnavailable",
-            "baseName": "maxUnavailable",
-            "type": "string",
-            "format": "int-or-string"
-        },
-        {
-            "name": "minAvailable",
-            "baseName": "minAvailable",
-            "type": "string",
-            "format": "int-or-string"
-        },
-        {
-            "name": "selector",
-            "baseName": "selector",
-            "type": "IoK8sApimachineryPkgApisMetaV1LabelSelector",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "maxUnavailable",
+      "baseName": "maxUnavailable",
+      "type": "string",
+      "format": "int-or-string",
+    },
+    {
+      "name": "minAvailable",
+      "baseName": "minAvailable",
+      "type": "string",
+      "format": "int-or-string",
+    },
+    {
+      "name": "selector",
+      "baseName": "selector",
+      "type": "IoK8sApimachineryPkgApisMetaV1LabelSelector",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiPolicyV1beta1PodDisruptionBudgetSpec.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

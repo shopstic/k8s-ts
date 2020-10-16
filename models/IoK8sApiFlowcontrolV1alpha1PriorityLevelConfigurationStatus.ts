@@ -10,33 +10,39 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationCondition } from './IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationCondition.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationCondition } from "./IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationCondition.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * PriorityLevelConfigurationStatus represents the current state of a \"request-priority\".
 */
 export class IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationStatus {
-    /**
+  /**
     * `conditions` is the current state of \"request-priority\".
     */
-    'conditions'?: Array<IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationCondition>;
+  "conditions"?: Array<
+    IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationCondition
+  >;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "conditions",
-            "baseName": "conditions",
-            "type": "Array<IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationCondition>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "conditions",
+      "baseName": "conditions",
+      "type":
+        "Array<IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationCondition>",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiFlowcontrolV1alpha1PriorityLevelConfigurationStatus
+      .attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

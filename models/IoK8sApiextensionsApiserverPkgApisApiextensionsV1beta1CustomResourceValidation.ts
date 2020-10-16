@@ -10,30 +10,35 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1JSONSchemaProps } from './IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1JSONSchemaProps.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1JSONSchemaProps } from "./IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1JSONSchemaProps.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * CustomResourceValidation is a list of validation methods for CustomResources.
 */
 export class IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1CustomResourceValidation {
-    'openAPIV3Schema'?: IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1JSONSchemaProps;
+  "openAPIV3Schema"?:
+    IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1JSONSchemaProps;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "openAPIV3Schema",
-            "baseName": "openAPIV3Schema",
-            "type": "IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1JSONSchemaProps",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "openAPIV3Schema",
+      "baseName": "openAPIV3Schema",
+      "type":
+        "IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1JSONSchemaProps",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1CustomResourceValidation.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiextensionsApiserverPkgApisApiextensionsV1beta1CustomResourceValidation
+      .attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

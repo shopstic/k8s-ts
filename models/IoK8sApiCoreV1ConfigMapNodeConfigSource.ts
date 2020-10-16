@@ -10,72 +10,74 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
 */
 export class IoK8sApiCoreV1ConfigMapNodeConfigSource {
-    /**
+  /**
     * KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
     */
-    'kubeletConfigKey': string;
-    /**
+  "kubeletConfigKey": string;
+  /**
     * Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
     */
-    'name': string;
-    /**
+  "name": string;
+  /**
     * Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
     */
-    'namespace': string;
-    /**
+  "namespace": string;
+  /**
     * ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
     */
-    'resourceVersion'?: string;
-    /**
+  "resourceVersion"?: string;
+  /**
     * UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
     */
-    'uid'?: string;
+  "uid"?: string;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "kubeletConfigKey",
-            "baseName": "kubeletConfigKey",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "namespace",
-            "baseName": "namespace",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "resourceVersion",
-            "baseName": "resourceVersion",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "uid",
-            "baseName": "uid",
-            "type": "string",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "kubeletConfigKey",
+      "baseName": "kubeletConfigKey",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "name",
+      "baseName": "name",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "namespace",
+      "baseName": "namespace",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "resourceVersion",
+      "baseName": "resourceVersion",
+      "type": "string",
+      "format": "",
+    },
+    {
+      "name": "uid",
+      "baseName": "uid",
+      "type": "string",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1ConfigMapNodeConfigSource.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1ConfigMapNodeConfigSource.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

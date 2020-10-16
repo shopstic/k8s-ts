@@ -10,33 +10,35 @@
  * Do not edit the class manually.
  */
 
-import { IoK8sApimachineryPkgApisMetaV1LabelSelector } from './IoK8sApimachineryPkgApisMetaV1LabelSelector.ts';
-import { HttpFile } from '../http/http.ts';
+import { IoK8sApimachineryPkgApisMetaV1LabelSelector } from "./IoK8sApimachineryPkgApisMetaV1LabelSelector.ts";
+import { HttpFile } from "../http/http.ts";
 
 /**
 * AggregationRule describes how to locate ClusterRoles to aggregate into the ClusterRole
 */
 export class IoK8sApiRbacV1alpha1AggregationRule {
-    /**
+  /**
     * ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole's permissions will be added
     */
-    'clusterRoleSelectors'?: Array<IoK8sApimachineryPkgApisMetaV1LabelSelector>;
+  "clusterRoleSelectors"?: Array<IoK8sApimachineryPkgApisMetaV1LabelSelector>;
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "clusterRoleSelectors",
-            "baseName": "clusterRoleSelectors",
-            "type": "Array<IoK8sApimachineryPkgApisMetaV1LabelSelector>",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "clusterRoleSelectors",
+      "baseName": "clusterRoleSelectors",
+      "type": "Array<IoK8sApimachineryPkgApisMetaV1LabelSelector>",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiRbacV1alpha1AggregationRule.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiRbacV1alpha1AggregationRule.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-

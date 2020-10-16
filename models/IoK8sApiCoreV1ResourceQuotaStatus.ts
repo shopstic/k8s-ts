@@ -10,42 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { HttpFile } from '../http/http.ts';
+import { HttpFile } from "../http/http.ts";
 
 /**
 * ResourceQuotaStatus defines the enforced hard limits and observed use.
 */
 export class IoK8sApiCoreV1ResourceQuotaStatus {
-    /**
+  /**
     * Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
     */
-    'hard'?: { [key: string]: string; };
-    /**
+  "hard"?: { [key: string]: string };
+  /**
     * Used is the current observed total usage of the resource in the namespace.
     */
-    'used'?: { [key: string]: string; };
+  "used"?: { [key: string]: string };
 
-    static readonly discriminator: string | undefined = undefined;
+  static readonly discriminator: string | undefined = undefined;
 
-    static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
-        {
-            "name": "hard",
-            "baseName": "hard",
-            "type": "{ [key: string]: string; }",
-            "format": ""
-        },
-        {
-            "name": "used",
-            "baseName": "used",
-            "type": "{ [key: string]: string; }",
-            "format": ""
-        }    ];
+  static readonly attributeTypeMap: Array<
+    { name: string; baseName: string; type: string; format: string }
+  > = [
+    {
+      "name": "hard",
+      "baseName": "hard",
+      "type": "{ [key: string]: string; }",
+      "format": "",
+    },
+    {
+      "name": "used",
+      "baseName": "used",
+      "type": "{ [key: string]: string; }",
+      "format": "",
+    },
+  ];
 
-    static getAttributeTypeMap() {
-        return IoK8sApiCoreV1ResourceQuotaStatus.attributeTypeMap;
-    }
-    
-    public constructor() {
-    }
+  static getAttributeTypeMap() {
+    return IoK8sApiCoreV1ResourceQuotaStatus.attributeTypeMap;
+  }
+
+  public constructor() {
+  }
 }
-
