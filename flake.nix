@@ -1,5 +1,5 @@
 {
-  description = "Deno Utils";
+  description = "Kubernetes OpenAPI Typescript Client";
 
   inputs = {
     hotPot.url = "github:shopstic/nix-hot-pot";
@@ -8,7 +8,7 @@
   };
 
   outputs = { self, nixpkgs, flakeUtils, hotPot }:
-    flakeUtils.lib.eachSystem [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ] (system:
+    flakeUtils.lib.eachSystem [ "x86_64-linux" "aarch64-linux" "aarch64-darwin" ] (system:
       let
         pkgs = import nixpkgs { inherit system; };
         hotPotPkgs = hotPot.packages.${system};
@@ -16,6 +16,7 @@
         vscodeSettings = pkgs.writeTextFile {
           name = "vscode-settings.json";
           text = builtins.toJSON {
+            "editor.acceptSuggestionOnCommitCharacter" = false;
             "deno.enable" = true;
             "deno.lint" = true;
             "deno.unstable" = true;
@@ -36,7 +37,14 @@
       in
       rec {
         devShell = pkgs.mkShellNoCC {
-          buildInputs = [ deno ];
+          buildInputs = [
+            deno
+            hotPotPkgs.openapi-ts
+          ] ++ builtins.attrValues {
+            inherit (pkgs)
+              nodejs-18_x
+              ;
+          };
           shellHook = ''
             mkdir -p ./.vscode
             cat ${vscodeSettings} > ./.vscode/settings.json

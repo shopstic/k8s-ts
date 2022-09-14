@@ -1,0 +1,22 @@
+{
+  "name": "k8s-ts",
+  "version": "1.2.2",
+  "description": "",
+  "main": "./esm/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shopstic/k8s-ts.git"
+  },
+  "author": "Jacky Nguyen",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/shopstic/k8s-ts/issues"
+  },
+  "homepage": "https://github.com/shopstic/k8s-ts#readme",
+  "devDependencies": {
+    "@types/node": "^18.0.6"
+  }
+}

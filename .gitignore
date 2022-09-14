@@ -1,2 +1,7 @@
-/.zsh_history
+/dist
 /.vscode
+/examples/*/dist
+node_modules
+tsconfig.tsbuildinfo
+.zsh_history
+/.env
