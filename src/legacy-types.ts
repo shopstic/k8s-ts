@@ -1,4 +1,4 @@
-// Generated from https://raw.githubusercontent.com/kubernetes/kubernetes/v1.23.10/api/openapi-spec/swagger.json
+// Generated from https://raw.githubusercontent.com/kubernetes/kubernetes/v1.24.9/api/openapi-spec/swagger.json
 import type { definitions as K8s } from "./openapi.ts";
 export type IoK8sApiAdmissionregistrationV1MutatingWebhook = K8s["io.k8s.api.admissionregistration.v1.MutatingWebhook"];
 export type IoK8sApiAdmissionregistrationV1MutatingWebhookConfiguration =
@@ -518,16 +518,12 @@ export type IoK8sApiNetworkingV1NetworkPolicyList = K8s["io.k8s.api.networking.v
 export type IoK8sApiNetworkingV1NetworkPolicyPeer = K8s["io.k8s.api.networking.v1.NetworkPolicyPeer"];
 export type IoK8sApiNetworkingV1NetworkPolicyPort = K8s["io.k8s.api.networking.v1.NetworkPolicyPort"];
 export type IoK8sApiNetworkingV1NetworkPolicySpec = K8s["io.k8s.api.networking.v1.NetworkPolicySpec"];
+export type IoK8sApiNetworkingV1NetworkPolicyStatus = K8s["io.k8s.api.networking.v1.NetworkPolicyStatus"];
 export type IoK8sApiNetworkingV1ServiceBackendPort = K8s["io.k8s.api.networking.v1.ServiceBackendPort"];
 export type IoK8sApiNodeV1Overhead = K8s["io.k8s.api.node.v1.Overhead"];
 export type IoK8sApiNodeV1RuntimeClass = K8s["io.k8s.api.node.v1.RuntimeClass"];
 export type IoK8sApiNodeV1RuntimeClassList = K8s["io.k8s.api.node.v1.RuntimeClassList"];
 export type IoK8sApiNodeV1Scheduling = K8s["io.k8s.api.node.v1.Scheduling"];
-export type IoK8sApiNodeV1alpha1Overhead = K8s["io.k8s.api.node.v1alpha1.Overhead"];
-export type IoK8sApiNodeV1alpha1RuntimeClass = K8s["io.k8s.api.node.v1alpha1.RuntimeClass"];
-export type IoK8sApiNodeV1alpha1RuntimeClassList = K8s["io.k8s.api.node.v1alpha1.RuntimeClassList"];
-export type IoK8sApiNodeV1alpha1RuntimeClassSpec = K8s["io.k8s.api.node.v1alpha1.RuntimeClassSpec"];
-export type IoK8sApiNodeV1alpha1Scheduling = K8s["io.k8s.api.node.v1alpha1.Scheduling"];
 export type IoK8sApiNodeV1beta1Overhead = K8s["io.k8s.api.node.v1beta1.Overhead"];
 export type IoK8sApiNodeV1beta1RuntimeClass = K8s["io.k8s.api.node.v1beta1.RuntimeClass"];
 export type IoK8sApiNodeV1beta1RuntimeClassList = K8s["io.k8s.api.node.v1beta1.RuntimeClassList"];
@@ -578,6 +574,8 @@ export type IoK8sApiStorageV1CsiNode = K8s["io.k8s.api.storage.v1.CSINode"];
 export type IoK8sApiStorageV1CsiNodeDriver = K8s["io.k8s.api.storage.v1.CSINodeDriver"];
 export type IoK8sApiStorageV1CsiNodeList = K8s["io.k8s.api.storage.v1.CSINodeList"];
 export type IoK8sApiStorageV1CsiNodeSpec = K8s["io.k8s.api.storage.v1.CSINodeSpec"];
+export type IoK8sApiStorageV1CsiStorageCapacity = K8s["io.k8s.api.storage.v1.CSIStorageCapacity"];
+export type IoK8sApiStorageV1CsiStorageCapacityList = K8s["io.k8s.api.storage.v1.CSIStorageCapacityList"];
 export type IoK8sApiStorageV1StorageClass = K8s["io.k8s.api.storage.v1.StorageClass"];
 export type IoK8sApiStorageV1StorageClassList = K8s["io.k8s.api.storage.v1.StorageClassList"];
 export type IoK8sApiStorageV1TokenRequest = K8s["io.k8s.api.storage.v1.TokenRequest"];
@@ -588,8 +586,6 @@ export type IoK8sApiStorageV1VolumeAttachmentSpec = K8s["io.k8s.api.storage.v1.V
 export type IoK8sApiStorageV1VolumeAttachmentStatus = K8s["io.k8s.api.storage.v1.VolumeAttachmentStatus"];
 export type IoK8sApiStorageV1VolumeError = K8s["io.k8s.api.storage.v1.VolumeError"];
 export type IoK8sApiStorageV1VolumeNodeResources = K8s["io.k8s.api.storage.v1.VolumeNodeResources"];
-export type IoK8sApiStorageV1alpha1CsiStorageCapacity = K8s["io.k8s.api.storage.v1alpha1.CSIStorageCapacity"];
-export type IoK8sApiStorageV1alpha1CsiStorageCapacityList = K8s["io.k8s.api.storage.v1alpha1.CSIStorageCapacityList"];
 export type IoK8sApiStorageV1beta1CsiStorageCapacity = K8s["io.k8s.api.storage.v1beta1.CSIStorageCapacity"];
 export type IoK8sApiStorageV1beta1CsiStorageCapacityList = K8s["io.k8s.api.storage.v1beta1.CSIStorageCapacityList"];
 export type IoK8sApiextensionsApiserverPkgApisApiextensionsV1CustomResourceColumnDefinition =
