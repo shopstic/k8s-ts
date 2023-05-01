@@ -1,4 +1,4 @@
-// Generated from https://raw.githubusercontent.com/kubernetes/kubernetes/v1.25.8/api/openapi-spec/swagger.json
+// Generated from https://raw.githubusercontent.com/kubernetes/kubernetes/v1.26.4/api/openapi-spec/swagger.json
 import type { definitions as K8s } from "./openapi.ts";
 export type IoK8sApiAdmissionregistrationV1MutatingWebhook = K8s["io.k8s.api.admissionregistration.v1.MutatingWebhook"];
 export type IoK8sApiAdmissionregistrationV1MutatingWebhookConfiguration =
@@ -17,6 +17,26 @@ export type IoK8sApiAdmissionregistrationV1ValidatingWebhookConfigurationList =
   K8s["io.k8s.api.admissionregistration.v1.ValidatingWebhookConfigurationList"];
 export type IoK8sApiAdmissionregistrationV1WebhookClientConfig =
   K8s["io.k8s.api.admissionregistration.v1.WebhookClientConfig"];
+export type IoK8sApiAdmissionregistrationV1alpha1MatchResources =
+  K8s["io.k8s.api.admissionregistration.v1alpha1.MatchResources"];
+export type IoK8sApiAdmissionregistrationV1alpha1NamedRuleWithOperations =
+  K8s["io.k8s.api.admissionregistration.v1alpha1.NamedRuleWithOperations"];
+export type IoK8sApiAdmissionregistrationV1alpha1ParamKind = K8s["io.k8s.api.admissionregistration.v1alpha1.ParamKind"];
+export type IoK8sApiAdmissionregistrationV1alpha1ParamRef = K8s["io.k8s.api.admissionregistration.v1alpha1.ParamRef"];
+export type IoK8sApiAdmissionregistrationV1alpha1ValidatingAdmissionPolicy =
+  K8s["io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicy"];
+export type IoK8sApiAdmissionregistrationV1alpha1ValidatingAdmissionPolicyBinding =
+  K8s["io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicyBinding"];
+export type IoK8sApiAdmissionregistrationV1alpha1ValidatingAdmissionPolicyBindingList =
+  K8s["io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingList"];
+export type IoK8sApiAdmissionregistrationV1alpha1ValidatingAdmissionPolicyBindingSpec =
+  K8s["io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicyBindingSpec"];
+export type IoK8sApiAdmissionregistrationV1alpha1ValidatingAdmissionPolicyList =
+  K8s["io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicyList"];
+export type IoK8sApiAdmissionregistrationV1alpha1ValidatingAdmissionPolicySpec =
+  K8s["io.k8s.api.admissionregistration.v1alpha1.ValidatingAdmissionPolicySpec"];
+export type IoK8sApiAdmissionregistrationV1alpha1Validation =
+  K8s["io.k8s.api.admissionregistration.v1alpha1.Validation"];
 export type IoK8sApiApiserverinternalV1alpha1ServerStorageVersion =
   K8s["io.k8s.api.apiserverinternal.v1alpha1.ServerStorageVersion"];
 export type IoK8sApiApiserverinternalV1alpha1StorageVersion =
@@ -54,6 +74,7 @@ export type IoK8sApiAppsV1RollingUpdateStatefulSetStrategy = K8s["io.k8s.api.app
 export type IoK8sApiAppsV1StatefulSet = K8s["io.k8s.api.apps.v1.StatefulSet"];
 export type IoK8sApiAppsV1StatefulSetCondition = K8s["io.k8s.api.apps.v1.StatefulSetCondition"];
 export type IoK8sApiAppsV1StatefulSetList = K8s["io.k8s.api.apps.v1.StatefulSetList"];
+export type IoK8sApiAppsV1StatefulSetOrdinals = K8s["io.k8s.api.apps.v1.StatefulSetOrdinals"];
 export type IoK8sApiAppsV1StatefulSetPersistentVolumeClaimRetentionPolicy =
   K8s["io.k8s.api.apps.v1.StatefulSetPersistentVolumeClaimRetentionPolicy"];
 export type IoK8sApiAppsV1StatefulSetSpec = K8s["io.k8s.api.apps.v1.StatefulSetSpec"];
@@ -67,6 +88,10 @@ export type IoK8sApiAuthenticationV1TokenReview = K8s["io.k8s.api.authentication
 export type IoK8sApiAuthenticationV1TokenReviewSpec = K8s["io.k8s.api.authentication.v1.TokenReviewSpec"];
 export type IoK8sApiAuthenticationV1TokenReviewStatus = K8s["io.k8s.api.authentication.v1.TokenReviewStatus"];
 export type IoK8sApiAuthenticationV1UserInfo = K8s["io.k8s.api.authentication.v1.UserInfo"];
+export type IoK8sApiAuthenticationV1alpha1SelfSubjectReview =
+  K8s["io.k8s.api.authentication.v1alpha1.SelfSubjectReview"];
+export type IoK8sApiAuthenticationV1alpha1SelfSubjectReviewStatus =
+  K8s["io.k8s.api.authentication.v1alpha1.SelfSubjectReviewStatus"];
 export type IoK8sApiAuthorizationV1LocalSubjectAccessReview =
   K8s["io.k8s.api.authorization.v1.LocalSubjectAccessReview"];
 export type IoK8sApiAuthorizationV1NonResourceAttributes = K8s["io.k8s.api.authorization.v1.NonResourceAttributes"];
@@ -129,39 +154,6 @@ export type IoK8sApiAutoscalingV2PodsMetricSource = K8s["io.k8s.api.autoscaling.
 export type IoK8sApiAutoscalingV2PodsMetricStatus = K8s["io.k8s.api.autoscaling.v2.PodsMetricStatus"];
 export type IoK8sApiAutoscalingV2ResourceMetricSource = K8s["io.k8s.api.autoscaling.v2.ResourceMetricSource"];
 export type IoK8sApiAutoscalingV2ResourceMetricStatus = K8s["io.k8s.api.autoscaling.v2.ResourceMetricStatus"];
-export type IoK8sApiAutoscalingV2beta2ContainerResourceMetricSource =
-  K8s["io.k8s.api.autoscaling.v2beta2.ContainerResourceMetricSource"];
-export type IoK8sApiAutoscalingV2beta2ContainerResourceMetricStatus =
-  K8s["io.k8s.api.autoscaling.v2beta2.ContainerResourceMetricStatus"];
-export type IoK8sApiAutoscalingV2beta2CrossVersionObjectReference =
-  K8s["io.k8s.api.autoscaling.v2beta2.CrossVersionObjectReference"];
-export type IoK8sApiAutoscalingV2beta2ExternalMetricSource = K8s["io.k8s.api.autoscaling.v2beta2.ExternalMetricSource"];
-export type IoK8sApiAutoscalingV2beta2ExternalMetricStatus = K8s["io.k8s.api.autoscaling.v2beta2.ExternalMetricStatus"];
-export type IoK8sApiAutoscalingV2beta2HpaScalingPolicy = K8s["io.k8s.api.autoscaling.v2beta2.HPAScalingPolicy"];
-export type IoK8sApiAutoscalingV2beta2HpaScalingRules = K8s["io.k8s.api.autoscaling.v2beta2.HPAScalingRules"];
-export type IoK8sApiAutoscalingV2beta2HorizontalPodAutoscaler =
-  K8s["io.k8s.api.autoscaling.v2beta2.HorizontalPodAutoscaler"];
-export type IoK8sApiAutoscalingV2beta2HorizontalPodAutoscalerBehavior =
-  K8s["io.k8s.api.autoscaling.v2beta2.HorizontalPodAutoscalerBehavior"];
-export type IoK8sApiAutoscalingV2beta2HorizontalPodAutoscalerCondition =
-  K8s["io.k8s.api.autoscaling.v2beta2.HorizontalPodAutoscalerCondition"];
-export type IoK8sApiAutoscalingV2beta2HorizontalPodAutoscalerList =
-  K8s["io.k8s.api.autoscaling.v2beta2.HorizontalPodAutoscalerList"];
-export type IoK8sApiAutoscalingV2beta2HorizontalPodAutoscalerSpec =
-  K8s["io.k8s.api.autoscaling.v2beta2.HorizontalPodAutoscalerSpec"];
-export type IoK8sApiAutoscalingV2beta2HorizontalPodAutoscalerStatus =
-  K8s["io.k8s.api.autoscaling.v2beta2.HorizontalPodAutoscalerStatus"];
-export type IoK8sApiAutoscalingV2beta2MetricIdentifier = K8s["io.k8s.api.autoscaling.v2beta2.MetricIdentifier"];
-export type IoK8sApiAutoscalingV2beta2MetricSpec = K8s["io.k8s.api.autoscaling.v2beta2.MetricSpec"];
-export type IoK8sApiAutoscalingV2beta2MetricStatus = K8s["io.k8s.api.autoscaling.v2beta2.MetricStatus"];
-export type IoK8sApiAutoscalingV2beta2MetricTarget = K8s["io.k8s.api.autoscaling.v2beta2.MetricTarget"];
-export type IoK8sApiAutoscalingV2beta2MetricValueStatus = K8s["io.k8s.api.autoscaling.v2beta2.MetricValueStatus"];
-export type IoK8sApiAutoscalingV2beta2ObjectMetricSource = K8s["io.k8s.api.autoscaling.v2beta2.ObjectMetricSource"];
-export type IoK8sApiAutoscalingV2beta2ObjectMetricStatus = K8s["io.k8s.api.autoscaling.v2beta2.ObjectMetricStatus"];
-export type IoK8sApiAutoscalingV2beta2PodsMetricSource = K8s["io.k8s.api.autoscaling.v2beta2.PodsMetricSource"];
-export type IoK8sApiAutoscalingV2beta2PodsMetricStatus = K8s["io.k8s.api.autoscaling.v2beta2.PodsMetricStatus"];
-export type IoK8sApiAutoscalingV2beta2ResourceMetricSource = K8s["io.k8s.api.autoscaling.v2beta2.ResourceMetricSource"];
-export type IoK8sApiAutoscalingV2beta2ResourceMetricStatus = K8s["io.k8s.api.autoscaling.v2beta2.ResourceMetricStatus"];
 export type IoK8sApiBatchV1CronJob = K8s["io.k8s.api.batch.v1.CronJob"];
 export type IoK8sApiBatchV1CronJobList = K8s["io.k8s.api.batch.v1.CronJobList"];
 export type IoK8sApiBatchV1CronJobSpec = K8s["io.k8s.api.batch.v1.CronJobSpec"];
@@ -206,6 +198,7 @@ export type IoK8sApiCoreV1CephFsPersistentVolumeSource = K8s["io.k8s.api.core.v1
 export type IoK8sApiCoreV1CephFsVolumeSource = K8s["io.k8s.api.core.v1.CephFSVolumeSource"];
 export type IoK8sApiCoreV1CinderPersistentVolumeSource = K8s["io.k8s.api.core.v1.CinderPersistentVolumeSource"];
 export type IoK8sApiCoreV1CinderVolumeSource = K8s["io.k8s.api.core.v1.CinderVolumeSource"];
+export type IoK8sApiCoreV1ClaimSource = K8s["io.k8s.api.core.v1.ClaimSource"];
 export type IoK8sApiCoreV1ClientIpConfig = K8s["io.k8s.api.core.v1.ClientIPConfig"];
 export type IoK8sApiCoreV1ComponentCondition = K8s["io.k8s.api.core.v1.ComponentCondition"];
 export type IoK8sApiCoreV1ComponentStatus = K8s["io.k8s.api.core.v1.ComponentStatus"];
@@ -317,6 +310,8 @@ export type IoK8sApiCoreV1PodIp = K8s["io.k8s.api.core.v1.PodIP"];
 export type IoK8sApiCoreV1PodList = K8s["io.k8s.api.core.v1.PodList"];
 export type IoK8sApiCoreV1PodOs = K8s["io.k8s.api.core.v1.PodOS"];
 export type IoK8sApiCoreV1PodReadinessGate = K8s["io.k8s.api.core.v1.PodReadinessGate"];
+export type IoK8sApiCoreV1PodResourceClaim = K8s["io.k8s.api.core.v1.PodResourceClaim"];
+export type IoK8sApiCoreV1PodSchedulingGate = K8s["io.k8s.api.core.v1.PodSchedulingGate"];
 export type IoK8sApiCoreV1PodSecurityContext = K8s["io.k8s.api.core.v1.PodSecurityContext"];
 export type IoK8sApiCoreV1PodSpec = K8s["io.k8s.api.core.v1.PodSpec"];
 export type IoK8sApiCoreV1PodStatus = K8s["io.k8s.api.core.v1.PodStatus"];
@@ -336,6 +331,7 @@ export type IoK8sApiCoreV1ReplicationControllerCondition = K8s["io.k8s.api.core.
 export type IoK8sApiCoreV1ReplicationControllerList = K8s["io.k8s.api.core.v1.ReplicationControllerList"];
 export type IoK8sApiCoreV1ReplicationControllerSpec = K8s["io.k8s.api.core.v1.ReplicationControllerSpec"];
 export type IoK8sApiCoreV1ReplicationControllerStatus = K8s["io.k8s.api.core.v1.ReplicationControllerStatus"];
+export type IoK8sApiCoreV1ResourceClaim = K8s["io.k8s.api.core.v1.ResourceClaim"];
 export type IoK8sApiCoreV1ResourceFieldSelector = K8s["io.k8s.api.core.v1.ResourceFieldSelector"];
 export type IoK8sApiCoreV1ResourceQuota = K8s["io.k8s.api.core.v1.ResourceQuota"];
 export type IoK8sApiCoreV1ResourceQuotaList = K8s["io.k8s.api.core.v1.ResourceQuotaList"];
@@ -376,6 +372,7 @@ export type IoK8sApiCoreV1TopologySelectorLabelRequirement = K8s["io.k8s.api.cor
 export type IoK8sApiCoreV1TopologySelectorTerm = K8s["io.k8s.api.core.v1.TopologySelectorTerm"];
 export type IoK8sApiCoreV1TopologySpreadConstraint = K8s["io.k8s.api.core.v1.TopologySpreadConstraint"];
 export type IoK8sApiCoreV1TypedLocalObjectReference = K8s["io.k8s.api.core.v1.TypedLocalObjectReference"];
+export type IoK8sApiCoreV1TypedObjectReference = K8s["io.k8s.api.core.v1.TypedObjectReference"];
 export type IoK8sApiCoreV1Volume = K8s["io.k8s.api.core.v1.Volume"];
 export type IoK8sApiCoreV1VolumeDevice = K8s["io.k8s.api.core.v1.VolumeDevice"];
 export type IoK8sApiCoreV1VolumeMount = K8s["io.k8s.api.core.v1.VolumeMount"];
@@ -394,39 +391,6 @@ export type IoK8sApiDiscoveryV1ForZone = K8s["io.k8s.api.discovery.v1.ForZone"];
 export type IoK8sApiEventsV1Event = K8s["io.k8s.api.events.v1.Event"];
 export type IoK8sApiEventsV1EventList = K8s["io.k8s.api.events.v1.EventList"];
 export type IoK8sApiEventsV1EventSeries = K8s["io.k8s.api.events.v1.EventSeries"];
-export type IoK8sApiFlowcontrolV1beta1FlowDistinguisherMethod =
-  K8s["io.k8s.api.flowcontrol.v1beta1.FlowDistinguisherMethod"];
-export type IoK8sApiFlowcontrolV1beta1FlowSchema = K8s["io.k8s.api.flowcontrol.v1beta1.FlowSchema"];
-export type IoK8sApiFlowcontrolV1beta1FlowSchemaCondition = K8s["io.k8s.api.flowcontrol.v1beta1.FlowSchemaCondition"];
-export type IoK8sApiFlowcontrolV1beta1FlowSchemaList = K8s["io.k8s.api.flowcontrol.v1beta1.FlowSchemaList"];
-export type IoK8sApiFlowcontrolV1beta1FlowSchemaSpec = K8s["io.k8s.api.flowcontrol.v1beta1.FlowSchemaSpec"];
-export type IoK8sApiFlowcontrolV1beta1FlowSchemaStatus = K8s["io.k8s.api.flowcontrol.v1beta1.FlowSchemaStatus"];
-export type IoK8sApiFlowcontrolV1beta1GroupSubject = K8s["io.k8s.api.flowcontrol.v1beta1.GroupSubject"];
-export type IoK8sApiFlowcontrolV1beta1LimitResponse = K8s["io.k8s.api.flowcontrol.v1beta1.LimitResponse"];
-export type IoK8sApiFlowcontrolV1beta1LimitedPriorityLevelConfiguration =
-  K8s["io.k8s.api.flowcontrol.v1beta1.LimitedPriorityLevelConfiguration"];
-export type IoK8sApiFlowcontrolV1beta1NonResourcePolicyRule =
-  K8s["io.k8s.api.flowcontrol.v1beta1.NonResourcePolicyRule"];
-export type IoK8sApiFlowcontrolV1beta1PolicyRulesWithSubjects =
-  K8s["io.k8s.api.flowcontrol.v1beta1.PolicyRulesWithSubjects"];
-export type IoK8sApiFlowcontrolV1beta1PriorityLevelConfiguration =
-  K8s["io.k8s.api.flowcontrol.v1beta1.PriorityLevelConfiguration"];
-export type IoK8sApiFlowcontrolV1beta1PriorityLevelConfigurationCondition =
-  K8s["io.k8s.api.flowcontrol.v1beta1.PriorityLevelConfigurationCondition"];
-export type IoK8sApiFlowcontrolV1beta1PriorityLevelConfigurationList =
-  K8s["io.k8s.api.flowcontrol.v1beta1.PriorityLevelConfigurationList"];
-export type IoK8sApiFlowcontrolV1beta1PriorityLevelConfigurationReference =
-  K8s["io.k8s.api.flowcontrol.v1beta1.PriorityLevelConfigurationReference"];
-export type IoK8sApiFlowcontrolV1beta1PriorityLevelConfigurationSpec =
-  K8s["io.k8s.api.flowcontrol.v1beta1.PriorityLevelConfigurationSpec"];
-export type IoK8sApiFlowcontrolV1beta1PriorityLevelConfigurationStatus =
-  K8s["io.k8s.api.flowcontrol.v1beta1.PriorityLevelConfigurationStatus"];
-export type IoK8sApiFlowcontrolV1beta1QueuingConfiguration = K8s["io.k8s.api.flowcontrol.v1beta1.QueuingConfiguration"];
-export type IoK8sApiFlowcontrolV1beta1ResourcePolicyRule = K8s["io.k8s.api.flowcontrol.v1beta1.ResourcePolicyRule"];
-export type IoK8sApiFlowcontrolV1beta1ServiceAccountSubject =
-  K8s["io.k8s.api.flowcontrol.v1beta1.ServiceAccountSubject"];
-export type IoK8sApiFlowcontrolV1beta1Subject = K8s["io.k8s.api.flowcontrol.v1beta1.Subject"];
-export type IoK8sApiFlowcontrolV1beta1UserSubject = K8s["io.k8s.api.flowcontrol.v1beta1.UserSubject"];
 export type IoK8sApiFlowcontrolV1beta2FlowDistinguisherMethod =
   K8s["io.k8s.api.flowcontrol.v1beta2.FlowDistinguisherMethod"];
 export type IoK8sApiFlowcontrolV1beta2FlowSchema = K8s["io.k8s.api.flowcontrol.v1beta2.FlowSchema"];
@@ -460,6 +424,39 @@ export type IoK8sApiFlowcontrolV1beta2ServiceAccountSubject =
   K8s["io.k8s.api.flowcontrol.v1beta2.ServiceAccountSubject"];
 export type IoK8sApiFlowcontrolV1beta2Subject = K8s["io.k8s.api.flowcontrol.v1beta2.Subject"];
 export type IoK8sApiFlowcontrolV1beta2UserSubject = K8s["io.k8s.api.flowcontrol.v1beta2.UserSubject"];
+export type IoK8sApiFlowcontrolV1beta3FlowDistinguisherMethod =
+  K8s["io.k8s.api.flowcontrol.v1beta3.FlowDistinguisherMethod"];
+export type IoK8sApiFlowcontrolV1beta3FlowSchema = K8s["io.k8s.api.flowcontrol.v1beta3.FlowSchema"];
+export type IoK8sApiFlowcontrolV1beta3FlowSchemaCondition = K8s["io.k8s.api.flowcontrol.v1beta3.FlowSchemaCondition"];
+export type IoK8sApiFlowcontrolV1beta3FlowSchemaList = K8s["io.k8s.api.flowcontrol.v1beta3.FlowSchemaList"];
+export type IoK8sApiFlowcontrolV1beta3FlowSchemaSpec = K8s["io.k8s.api.flowcontrol.v1beta3.FlowSchemaSpec"];
+export type IoK8sApiFlowcontrolV1beta3FlowSchemaStatus = K8s["io.k8s.api.flowcontrol.v1beta3.FlowSchemaStatus"];
+export type IoK8sApiFlowcontrolV1beta3GroupSubject = K8s["io.k8s.api.flowcontrol.v1beta3.GroupSubject"];
+export type IoK8sApiFlowcontrolV1beta3LimitResponse = K8s["io.k8s.api.flowcontrol.v1beta3.LimitResponse"];
+export type IoK8sApiFlowcontrolV1beta3LimitedPriorityLevelConfiguration =
+  K8s["io.k8s.api.flowcontrol.v1beta3.LimitedPriorityLevelConfiguration"];
+export type IoK8sApiFlowcontrolV1beta3NonResourcePolicyRule =
+  K8s["io.k8s.api.flowcontrol.v1beta3.NonResourcePolicyRule"];
+export type IoK8sApiFlowcontrolV1beta3PolicyRulesWithSubjects =
+  K8s["io.k8s.api.flowcontrol.v1beta3.PolicyRulesWithSubjects"];
+export type IoK8sApiFlowcontrolV1beta3PriorityLevelConfiguration =
+  K8s["io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfiguration"];
+export type IoK8sApiFlowcontrolV1beta3PriorityLevelConfigurationCondition =
+  K8s["io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationCondition"];
+export type IoK8sApiFlowcontrolV1beta3PriorityLevelConfigurationList =
+  K8s["io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationList"];
+export type IoK8sApiFlowcontrolV1beta3PriorityLevelConfigurationReference =
+  K8s["io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationReference"];
+export type IoK8sApiFlowcontrolV1beta3PriorityLevelConfigurationSpec =
+  K8s["io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationSpec"];
+export type IoK8sApiFlowcontrolV1beta3PriorityLevelConfigurationStatus =
+  K8s["io.k8s.api.flowcontrol.v1beta3.PriorityLevelConfigurationStatus"];
+export type IoK8sApiFlowcontrolV1beta3QueuingConfiguration = K8s["io.k8s.api.flowcontrol.v1beta3.QueuingConfiguration"];
+export type IoK8sApiFlowcontrolV1beta3ResourcePolicyRule = K8s["io.k8s.api.flowcontrol.v1beta3.ResourcePolicyRule"];
+export type IoK8sApiFlowcontrolV1beta3ServiceAccountSubject =
+  K8s["io.k8s.api.flowcontrol.v1beta3.ServiceAccountSubject"];
+export type IoK8sApiFlowcontrolV1beta3Subject = K8s["io.k8s.api.flowcontrol.v1beta3.Subject"];
+export type IoK8sApiFlowcontrolV1beta3UserSubject = K8s["io.k8s.api.flowcontrol.v1beta3.UserSubject"];
 export type IoK8sApiNetworkingV1HttpIngressPath = K8s["io.k8s.api.networking.v1.HTTPIngressPath"];
 export type IoK8sApiNetworkingV1HttpIngressRuleValue = K8s["io.k8s.api.networking.v1.HTTPIngressRuleValue"];
 export type IoK8sApiNetworkingV1IpBlock = K8s["io.k8s.api.networking.v1.IPBlock"];
@@ -471,6 +468,9 @@ export type IoK8sApiNetworkingV1IngressClassParametersReference =
   K8s["io.k8s.api.networking.v1.IngressClassParametersReference"];
 export type IoK8sApiNetworkingV1IngressClassSpec = K8s["io.k8s.api.networking.v1.IngressClassSpec"];
 export type IoK8sApiNetworkingV1IngressList = K8s["io.k8s.api.networking.v1.IngressList"];
+export type IoK8sApiNetworkingV1IngressLoadBalancerIngress = K8s["io.k8s.api.networking.v1.IngressLoadBalancerIngress"];
+export type IoK8sApiNetworkingV1IngressLoadBalancerStatus = K8s["io.k8s.api.networking.v1.IngressLoadBalancerStatus"];
+export type IoK8sApiNetworkingV1IngressPortStatus = K8s["io.k8s.api.networking.v1.IngressPortStatus"];
 export type IoK8sApiNetworkingV1IngressRule = K8s["io.k8s.api.networking.v1.IngressRule"];
 export type IoK8sApiNetworkingV1IngressServiceBackend = K8s["io.k8s.api.networking.v1.IngressServiceBackend"];
 export type IoK8sApiNetworkingV1IngressSpec = K8s["io.k8s.api.networking.v1.IngressSpec"];
@@ -509,6 +509,30 @@ export type IoK8sApiRbacV1RoleBindingList = K8s["io.k8s.api.rbac.v1.RoleBindingL
 export type IoK8sApiRbacV1RoleList = K8s["io.k8s.api.rbac.v1.RoleList"];
 export type IoK8sApiRbacV1RoleRef = K8s["io.k8s.api.rbac.v1.RoleRef"];
 export type IoK8sApiRbacV1Subject = K8s["io.k8s.api.rbac.v1.Subject"];
+export type IoK8sApiResourceV1alpha1AllocationResult = K8s["io.k8s.api.resource.v1alpha1.AllocationResult"];
+export type IoK8sApiResourceV1alpha1PodScheduling = K8s["io.k8s.api.resource.v1alpha1.PodScheduling"];
+export type IoK8sApiResourceV1alpha1PodSchedulingList = K8s["io.k8s.api.resource.v1alpha1.PodSchedulingList"];
+export type IoK8sApiResourceV1alpha1PodSchedulingSpec = K8s["io.k8s.api.resource.v1alpha1.PodSchedulingSpec"];
+export type IoK8sApiResourceV1alpha1PodSchedulingStatus = K8s["io.k8s.api.resource.v1alpha1.PodSchedulingStatus"];
+export type IoK8sApiResourceV1alpha1ResourceClaim = K8s["io.k8s.api.resource.v1alpha1.ResourceClaim"];
+export type IoK8sApiResourceV1alpha1ResourceClaimConsumerReference =
+  K8s["io.k8s.api.resource.v1alpha1.ResourceClaimConsumerReference"];
+export type IoK8sApiResourceV1alpha1ResourceClaimList = K8s["io.k8s.api.resource.v1alpha1.ResourceClaimList"];
+export type IoK8sApiResourceV1alpha1ResourceClaimParametersReference =
+  K8s["io.k8s.api.resource.v1alpha1.ResourceClaimParametersReference"];
+export type IoK8sApiResourceV1alpha1ResourceClaimSchedulingStatus =
+  K8s["io.k8s.api.resource.v1alpha1.ResourceClaimSchedulingStatus"];
+export type IoK8sApiResourceV1alpha1ResourceClaimSpec = K8s["io.k8s.api.resource.v1alpha1.ResourceClaimSpec"];
+export type IoK8sApiResourceV1alpha1ResourceClaimStatus = K8s["io.k8s.api.resource.v1alpha1.ResourceClaimStatus"];
+export type IoK8sApiResourceV1alpha1ResourceClaimTemplate = K8s["io.k8s.api.resource.v1alpha1.ResourceClaimTemplate"];
+export type IoK8sApiResourceV1alpha1ResourceClaimTemplateList =
+  K8s["io.k8s.api.resource.v1alpha1.ResourceClaimTemplateList"];
+export type IoK8sApiResourceV1alpha1ResourceClaimTemplateSpec =
+  K8s["io.k8s.api.resource.v1alpha1.ResourceClaimTemplateSpec"];
+export type IoK8sApiResourceV1alpha1ResourceClass = K8s["io.k8s.api.resource.v1alpha1.ResourceClass"];
+export type IoK8sApiResourceV1alpha1ResourceClassList = K8s["io.k8s.api.resource.v1alpha1.ResourceClassList"];
+export type IoK8sApiResourceV1alpha1ResourceClassParametersReference =
+  K8s["io.k8s.api.resource.v1alpha1.ResourceClassParametersReference"];
 export type IoK8sApiSchedulingV1PriorityClass = K8s["io.k8s.api.scheduling.v1.PriorityClass"];
 export type IoK8sApiSchedulingV1PriorityClassList = K8s["io.k8s.api.scheduling.v1.PriorityClassList"];
 export type IoK8sApiStorageV1CsiDriver = K8s["io.k8s.api.storage.v1.CSIDriver"];

@@ -12,7 +12,7 @@ publish_npm() {
 }
 
 gen_types() {
-  local SPEC_URL=${1:-"https://raw.githubusercontent.com/kubernetes/kubernetes/v1.25.8/api/openapi-spec/swagger.json"}
+  local SPEC_URL=${1:-"https://raw.githubusercontent.com/kubernetes/kubernetes/v1.26.4/api/openapi-spec/swagger.json"}
 
   echo "// deno-lint-ignore-file no-empty-interface" > "$THIS_DIR"/src/openapi.ts
   echo "// Generated from ${SPEC_URL}" >> "$THIS_DIR"/src/openapi.ts

@@ -256,6 +256,15 @@ export type K8sApiPathsWithCrd<
 export type K8sApiWatchEvent<T> = {
   type: "ADDED" | "MODIFIED" | "DELETED";
   object: T;
+} | {
+  type: "BOOKMARK";
+  object: {
+    kind: ExtractCrdKind<T>;
+    apiVersion: ExtractCrdApiVersion<T>;
+    metadata: {
+      resourceVersion: string;
+    };
+  };
 };
 
 export type K8sApiExtractListItemType<T> = T extends {

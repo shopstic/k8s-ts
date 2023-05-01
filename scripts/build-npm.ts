@@ -1,5 +1,5 @@
-import { dirname, fromFileUrl, join } from "https://deno.land/std@0.181.0/path/mod.ts";
-import { build } from "https://deno.land/x/dnt@0.33.1/mod.ts";
+import { dirname, fromFileUrl, join } from "https://deno.land/std@0.182.0/path/mod.ts";
+import { build } from "https://deno.land/x/dnt@0.34.0/mod.ts";
 import packageJson from "../package.json" assert { type: "json" };
 
 const currentPath = dirname(fromFileUrl(import.meta.url));
