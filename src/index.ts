@@ -1,4 +1,5 @@
 import {
+  deepMerge,
   OpenapiOperationApi,
   OpenapiOperationApiArgType,
   OpenapiOperationApiReturnType,
@@ -272,7 +273,7 @@ export type K8sApiExtractListItemType<T> = T extends {
 } ? E
   : unknown;
 
-export function k8sApiWatch<
+export function k8sControllerWatch<
   // deno-lint-ignore no-explicit-any
   Func extends OpenapiOperationApi<any>,
   Item extends K8sApiExtractListItemType<OpenapiOperationApiReturnType<Func>>,
@@ -280,23 +281,49 @@ export function k8sApiWatch<
 >(
   api: Func,
 ): (
-  args: Args & {
-    query: {
-      watch: true;
-    };
-  },
+  args: Args,
   init: RequestInit,
 ) => AsyncGenerator<K8sApiWatchEvent<Item>> {
   async function* doWatch(args: Args, init: RequestInit) {
-    for await (
-      const line of readLines(
-        readerFromStreamReader(
-          (await api.stream(args, init)).data!.getReader(),
-        ),
-      )
-    ) {
-      const event: K8sApiWatchEvent<Item> = JSON.parse(line);
-      yield event;
+    try {
+      const initialList = await api(args, init);
+      // deno-lint-ignore no-explicit-any
+      const data = initialList.data as any;
+      let lastResourceVersion = data.metadata.resourceVersion;
+
+      for (const initialItem of data.items) {
+        yield {
+          type: "ADDED",
+          object: initialItem,
+        } as K8sApiWatchEvent<Item>;
+      }
+
+      while (!init.signal || !init.signal.aborted) {
+        for await (
+          const line of readLines(readerFromStreamReader(
+            (await api.stream(
+              // @ts-ignore Suppress invalid npm module type warnings
+              deepMerge(structuredClone(args), {
+                query: {
+                  allowWatchBookmarks: true,
+                  watch: true,
+                  ...(lastResourceVersion ? { resourceVersion: lastResourceVersion } : {}),
+                },
+              }),
+              init,
+            )).data!.getReader(),
+          ))
+        ) {
+          const event: K8sApiWatchEvent<Item> = JSON.parse(line);
+          yield event;
+          // deno-lint-ignore no-explicit-any
+          lastResourceVersion = (event.object as any).metadata.resourceVersion;
+        }
+      }
+    } catch (e) {
+      if (!(e instanceof DOMException) || e.name !== "AbortError") {
+        throw e;
+      }
     }
   }
 

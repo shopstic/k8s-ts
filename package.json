@@ -1,6 +1,6 @@
 {
   "name": "k8s-ts",
-  "version": "1.27.1",
+  "version": "1.27.1-2",
   "description": "",
   "main": "./esm/index.js",
   "directories": {
