@@ -3,8 +3,7 @@ import {
   OpenapiOperationApi,
   OpenapiOperationApiArgType,
   OpenapiOperationApiReturnType,
-  readerFromStreamReader,
-  readLines,
+  TextLineStream,
 } from "./deps.ts";
 import { definitions, paths as K8sApiPaths } from "./openapi.ts";
 
@@ -299,21 +298,22 @@ export function k8sControllerWatch<
       }
 
       while (!init.signal || !init.signal.aborted) {
-        for await (
-          const line of readLines(readerFromStreamReader(
-            (await api.stream(
-              // @ts-ignore Suppress invalid npm module type warnings
-              deepMerge(structuredClone(args), {
-                query: {
-                  allowWatchBookmarks: true,
-                  watch: true,
-                  ...(lastResourceVersion ? { resourceVersion: lastResourceVersion } : {}),
-                },
-              }),
-              init,
-            )).data!.getReader(),
-          ))
-        ) {
+        const lineStream = (await api.stream(
+          // @ts-ignore Suppress invalid npm module type warnings
+          deepMerge(structuredClone(args), {
+            query: {
+              allowWatchBookmarks: true,
+              watch: true,
+              ...(lastResourceVersion ? { resourceVersion: lastResourceVersion } : {}),
+            },
+          }),
+          init,
+        )).data!
+          .pipeThrough(new TextDecoderStream())
+          .pipeThrough(new TextLineStream());
+
+        // @ts-ignore Suppress type 'ReadableStream<string>' must have a '[Symbol.asyncIterator]()' method that returns an async iterator.
+        for await (const line of lineStream) {
           const event: K8sApiWatchEvent<Item> = JSON.parse(line);
           yield event;
           // deno-lint-ignore no-explicit-any

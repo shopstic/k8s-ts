@@ -1,4 +1,4 @@
-import { dirname, fromFileUrl, join } from "https://deno.land/std@0.200.0/path/mod.ts";
+import { dirname, fromFileUrl, join } from "https://deno.land/std@0.202.0/path/mod.ts";
 import { build } from "https://deno.land/x/dnt@0.38.1/mod.ts";
 import packageJson from "../package.json" assert { type: "json" };
 
@@ -22,7 +22,7 @@ await build({
   },
   package: packageJson,
   compilerOptions: {
-    lib: ["ES2020", "DOM"],
+    lib: ["ES2022", "DOM"],
   },
   mappings: {
     "https://deno.land/x/openapi_client@3.0.3/index.ts": {
