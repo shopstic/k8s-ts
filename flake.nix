@@ -43,7 +43,7 @@
             hotPotPkgs.openapi-ts-gen
           ] ++ builtins.attrValues {
             inherit (pkgs)
-              nodejs-18_x
+              nodejs_20
               ;
           };
           shellHook = ''

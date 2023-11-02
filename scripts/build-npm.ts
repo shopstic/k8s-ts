@@ -1,4 +1,4 @@
-import { dirname, fromFileUrl, join } from "https://deno.land/std@0.202.0/path/mod.ts";
+import { dirname, fromFileUrl, join } from "https://deno.land/std@0.205.0/path/mod.ts";
 import { build } from "https://deno.land/x/dnt@0.38.1/mod.ts";
 import packageJson from "../package.json" assert { type: "json" };
 

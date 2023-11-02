@@ -1,4 +1,4 @@
-// Generated from https://raw.githubusercontent.com/kubernetes/kubernetes/v1.28.2/api/openapi-spec/swagger.json
+// Generated from https://raw.githubusercontent.com/kubernetes/kubernetes/v1.28.3/api/openapi-spec/swagger.json
 import type { definitions as K8s } from "./openapi.ts";
 export type IoK8sApiAdmissionregistrationV1MatchCondition = K8s["io.k8s.api.admissionregistration.v1.MatchCondition"];
 export type IoK8sApiAdmissionregistrationV1MutatingWebhook = K8s["io.k8s.api.admissionregistration.v1.MutatingWebhook"];
