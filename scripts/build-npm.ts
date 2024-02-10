@@ -1,5 +1,5 @@
 import { dirname, fromFileUrl, join } from "https://deno.land/std@0.205.0/path/mod.ts";
-import { build } from "https://deno.land/x/dnt@0.38.1/mod.ts";
+import { build } from "https://deno.land/x/dnt@0.40.0/mod.ts";
 import packageJson from "../package.json" assert { type: "json" };
 
 const currentPath = dirname(fromFileUrl(import.meta.url));
@@ -25,9 +25,9 @@ await build({
     lib: ["ES2022", "DOM"],
   },
   mappings: {
-    "https://deno.land/x/openapi_client@3.0.3/index.ts": {
+    "https://deno.land/x/openapi_client@3.0.6/index.ts": {
       name: "openapi-typed-client",
-      version: "3.0.3",
+      version: "3.0.6",
     },
   },
 });
